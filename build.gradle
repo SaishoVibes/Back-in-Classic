@@ -11,6 +11,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 
 version = '0.5.3'
+
 group = 'com.saisho.backinclassic'
 archivesBaseName = 'backinclassic'
 
