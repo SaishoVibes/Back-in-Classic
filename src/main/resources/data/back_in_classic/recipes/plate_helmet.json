@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:iron_helmet"
+  },
+  "addition": {
+    "item": "minecraft:heavy_weighted_pressure_plate"
+  },
+  "result": {
+    "item": "back_in_classic:plate_helmet"
+  }
+}

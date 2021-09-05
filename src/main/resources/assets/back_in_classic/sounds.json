@@ -1,0 +1,72 @@
+{
+  "birds_chirping": {
+    "category": "ambient",
+    "subtitle": "subtitles.birds_chirping",
+    "sounds": [
+      {
+        "name": "back_in_classic:birds_screaming_loop",
+        "stream": false
+      }
+    ]
+  },
+  "cave_chimes": {
+    "category": "ambient",
+    "subtitle": "subtitles.cave_chimes",
+    "sounds": [
+      {
+        "name": "back_in_classic:cave_chimes",
+        "stream": false
+      }
+    ]
+  },
+  "ocean_loop": {
+    "category": "ambient",
+    "subtitle": "subtitles.ocean_loop",
+    "sounds": [
+      {
+        "name": "back_in_classic:ocean",
+        "stream": false
+      }
+    ]
+  },
+  "waterfall": {
+    "category": "block",
+    "subtitle": "subtitles.waterfall",
+    "sounds": [
+      {
+        "name": "back_in_classic:waterfall",
+        "stream": false
+      }
+    ]
+  },
+  "instant_bow_shot": {
+    "category": "player",
+    "subtitle": "subtitles.instant_bow_shot",
+    "sounds": [
+      {
+        "name": "back_in_classic:bow_shooting_old",
+        "stream": false
+      }
+    ]
+  },
+  "human_death": {
+    "category": "master",
+    "subtitle": "subtitles.human_death",
+    "sounds": [
+      {
+        "name": "back_in_classic:fallsmall",
+        "stream": false
+      }
+    ]
+  },
+  "human_oof": {
+    "category": "master",
+    "subtitle": "subtitles.human_oof",
+    "sounds": [
+      {
+        "name": "back_in_classic:hurt_old",
+        "stream": false
+      }
+    ]
+  }
+}

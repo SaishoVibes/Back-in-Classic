@@ -1,0 +1,39 @@
+{
+  "group": "back_in_classic",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "back_in_classic:fire"
+    },
+    "2": {
+      "item": "back_in_classic:fire"
+    },
+    "3": {
+      "item": "back_in_classic:fire"
+    },
+    "4": {
+      "item": "back_in_classic:fire"
+    },
+    "5": {
+      "item": "back_in_classic:fire"
+    },
+    "6": {
+      "item": "back_in_classic:fire"
+    },
+    "7": {
+      "item": "back_in_classic:fire"
+    },
+    "8": {
+      "item": "back_in_classic:fire"
+    }
+  },
+  "result": {
+    "item": "minecraft:chainmail_chestplate",
+    "count": 1
+  }
+}

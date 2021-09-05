@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="back_in_classic"
+version="0.5.0_01"
+displayName="Back In Classic"
+credits="https://www.curseforge.com/members/mantisgaming1/"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/back-in-classic"
+logoFile="logo.png"
+authors="MantisYT"
+description='''
+Bringing back Classic Features with new functions!
+'''
+
+[[dependencies.back_in_classic]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+
