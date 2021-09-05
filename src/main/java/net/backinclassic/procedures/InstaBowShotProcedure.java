@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
@@ -31,9 +31,9 @@ import net.minecraft.client.network.play.NetworkPlayerInfo;
 import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.backinclassic.world.InstantBowGameRule;
-import net.mcreator.backinclassic.enchantment.SharpshotEnchantment;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.world.InstantBowGameRule;
+import net.backinclassic.enchantment.SharpshotEnchantment;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Random;
 import java.util.Map;

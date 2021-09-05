@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,8 +14,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 
-import net.mcreator.backinclassic.world.DoOldCombatGameRule;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.world.DoOldCombatGameRule;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 import java.util.HashMap;

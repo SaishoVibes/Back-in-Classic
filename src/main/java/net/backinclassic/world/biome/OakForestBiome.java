@@ -1,5 +1,5 @@
 
-package net.mcreator.backinclassic.world.biome;
+package net.backinclassic.world.biome;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -48,7 +48,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.backinclassic.BackInClassicModElements;
+import net.backinclassic.BackInClassicModElements;
 
 import java.util.Set;
 import java.util.Random;

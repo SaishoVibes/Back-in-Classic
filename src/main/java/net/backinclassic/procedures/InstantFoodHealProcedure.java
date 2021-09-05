@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,8 +14,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.backinclassic.world.DoBetaHungerGameRule;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.world.DoBetaHungerGameRule;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 import java.util.HashMap;

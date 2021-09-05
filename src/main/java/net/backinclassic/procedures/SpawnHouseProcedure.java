@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.gen.feature.template.Template;
@@ -10,8 +10,8 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Mirror;
 
-import net.mcreator.backinclassic.BackInClassicModVariables;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.BackInClassicModVariables;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 

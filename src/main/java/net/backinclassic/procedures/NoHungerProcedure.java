@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -10,8 +10,8 @@ import net.minecraft.util.FoodStats;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.backinclassic.world.DoBetaHungerGameRule;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.world.DoBetaHungerGameRule;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 

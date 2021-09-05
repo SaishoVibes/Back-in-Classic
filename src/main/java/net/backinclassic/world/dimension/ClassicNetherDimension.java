@@ -1,5 +1,5 @@
 
-package net.mcreator.backinclassic.world.dimension;
+package net.backinclassic.world.dimension;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -55,10 +55,10 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 import net.minecraft.block.AbstractBlock;
 
-import net.mcreator.backinclassic.procedures.ClassicNetherPortalTriggerUsedProcedure;
-import net.mcreator.backinclassic.procedures.ClassicNetherPlayerLeavesDimensionProcedure;
-import net.mcreator.backinclassic.item.ClassicNetherItem;
-import net.mcreator.backinclassic.BackInClassicModElements;
+import net.backinclassic.procedures.ClassicNetherPortalTriggerUsedProcedure;
+import net.backinclassic.procedures.ClassicNetherPlayerLeavesDimensionProcedure;
+import net.backinclassic.item.ClassicNetherItem;
+import net.backinclassic.BackInClassicModElements;
 
 import javax.annotation.Nullable;
 

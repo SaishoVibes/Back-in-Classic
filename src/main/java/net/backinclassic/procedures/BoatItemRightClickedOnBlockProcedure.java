@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
@@ -8,8 +8,8 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.backinclassic.item.BoatItemItem;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.item.BoatItemItem;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 

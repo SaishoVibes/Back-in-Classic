@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,8 +20,8 @@ import net.minecraft.network.play.server.SChangeGameStatePacket;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.backinclassic.world.DoClassicOverworldGameRule;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.world.DoClassicOverworldGameRule;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 import java.util.HashMap;

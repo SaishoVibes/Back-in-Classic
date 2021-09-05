@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -7,7 +7,7 @@ import net.minecraftforge.event.world.BlockEvent;
 import net.minecraft.world.IWorld;
 import net.minecraft.particles.ParticleTypes;
 
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 import java.util.HashMap;

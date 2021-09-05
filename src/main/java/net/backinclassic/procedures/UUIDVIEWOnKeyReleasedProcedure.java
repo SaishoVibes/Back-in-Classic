@@ -1,11 +1,11 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.backinclassic.BackInClassicModVariables;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.BackInClassicModVariables;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 

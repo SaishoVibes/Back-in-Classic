@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingSetAttackTargetEvent;
@@ -14,9 +14,9 @@ import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.backinclassic.BackInClassicModVariables;
-import net.mcreator.backinclassic.BackInClassicModElements;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.BackInClassicModVariables;
+import net.backinclassic.BackInClassicModElements;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 import java.util.HashMap;
