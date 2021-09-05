@@ -1,0 +1,36 @@
+{
+  "group": "back_in_classic",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:diamond"
+    },
+    "3": {
+      "item": "minecraft:diamond"
+    },
+    "4": {
+      "tag": "minecraft:wool"
+    },
+    "5": {
+      "item": "minecraft:diamond"
+    },
+    "6": {
+      "item": "minecraft:diamond"
+    },
+    "7": {
+      "item": "minecraft:diamond"
+    },
+    "8": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "minecraft:diamond_horse_armor",
+    "count": 1
+  }
+}

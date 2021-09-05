@@ -1,0 +1,7 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "back_in_classic:blocks/infinitewater",
+    "particle": "back_in_classic:blocks/infinitewater"
+  }
+}

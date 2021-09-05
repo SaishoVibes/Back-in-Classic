@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "back_in_classic:block/classic_nether_portal_ew"
+    },
+    "axis=x": {
+      "model": "back_in_classic:block/classic_nether_portal_ns"
+    }
+  }
+}

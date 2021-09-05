@@ -1,0 +1,13 @@
+{
+  "group": "back_in_classic",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "back_in_classic:rose_flower"
+    }
+  ],
+  "result": {
+    "item": "minecraft:red_dye",
+    "count": 1
+  }
+}

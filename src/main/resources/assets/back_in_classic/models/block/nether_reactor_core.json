@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "back_in_classic:blocks/nether_reactor_core",
+    "up": "back_in_classic:blocks/nether_reactor_core",
+    "north": "back_in_classic:blocks/nether_reactor_core",
+    "east": "back_in_classic:blocks/nether_reactor_core",
+    "south": "back_in_classic:blocks/nether_reactor_core",
+    "west": "back_in_classic:blocks/nether_reactor_core",
+    "particle": "back_in_classic:blocks/nether_reactor_core"
+  }
+}
