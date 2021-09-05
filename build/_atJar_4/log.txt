@@ -1,0 +1,7 @@
+Java Launcher: C:\Users\brick\.gradle\jdks\jdk-16.0.2+7\bin\java.exe
+Arguments: '--inJar, C:\Users\brick\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.17.1-37.0.34\forge-1.17.1-37.0.34-injected.jar, --outJar, C:\Users\brick\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.17.1-37.0.34_mapped_official_1.17.1\forge-1.17.1-37.0.34_mapped_official_1.17.1.jar, --logFile, accesstransform.log, --atFile, C:\Users\brick\OneDrive\Documents\GitHub\Back-in-Classic\build\_atJar_4\parent_at.cfg'
+Classpath:
+ - C:\Users\brick\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\accesstransformers\3.0.1\accesstransformers-3.0.1-fatjar.jar
+Working directory: C:\Users\brick\OneDrive\Documents\GitHub\Back-in-Classic\build\_atJar_4
+Main class: net.minecraftforge.accesstransformer.TransformerProcessor
+====================================
