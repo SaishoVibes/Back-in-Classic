@@ -1,7 +1,7 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
-import com.mcreator.backinclassic.PacketHandler;
-import com.mcreator.backinclassic.EventHandler;
+import com.backinclassic.PacketHandler;
+import com.backinclassic.EventHandler;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;

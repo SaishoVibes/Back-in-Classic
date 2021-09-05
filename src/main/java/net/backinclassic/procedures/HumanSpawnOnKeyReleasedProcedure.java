@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
@@ -9,8 +9,8 @@ import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.backinclassic.entity.HumanEntity;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.entity.HumanEntity;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 

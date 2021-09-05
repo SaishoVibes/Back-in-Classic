@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
@@ -25,8 +25,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.backinclassic.item.FireItem;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.item.FireItem;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Random;
 import java.util.Map;

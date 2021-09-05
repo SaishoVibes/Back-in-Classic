@@ -1,5 +1,5 @@
 
-package net.mcreator.backinclassic.world.structure;
+package net.backinclassic.world.structure;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

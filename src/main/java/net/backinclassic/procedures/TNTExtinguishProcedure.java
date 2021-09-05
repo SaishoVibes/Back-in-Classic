@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -16,7 +16,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Random;
 import java.util.Map;

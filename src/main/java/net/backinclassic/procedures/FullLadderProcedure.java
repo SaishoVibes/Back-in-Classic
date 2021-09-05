@@ -1,10 +1,10 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.WorldEvent;
 
-import net.minecraft.world.IWorld;
+import net.world.IWorld;
 
 import java.util.Map;
 import java.util.HashMap;

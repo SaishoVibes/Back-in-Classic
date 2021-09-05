@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
@@ -26,7 +26,7 @@ import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 import java.util.HashMap;

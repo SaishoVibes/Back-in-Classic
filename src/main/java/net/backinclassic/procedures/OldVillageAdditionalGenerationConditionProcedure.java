@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.common.BiomeDictionary;
 
@@ -7,7 +7,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.RegistryKey;
 
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 

@@ -1,5 +1,5 @@
 
-package net.mcreator.backinclassic.world.structure;
+package net.backinclassic.world.structure;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -28,8 +28,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
 
-import net.mcreator.backinclassic.procedures.RemnantRoadsOnGenerationProcedure;
-import net.mcreator.backinclassic.procedures.OldVillageAdditionalGenerationConditionProcedure;
+import net.backinclassic.procedures.RemnantRoadsOnGenerationProcedure;
+import net.backinclassic.procedures.OldVillageAdditionalGenerationConditionProcedure;
 
 import java.util.Random;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
@@ -8,9 +8,9 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.block.Blocks;
 
-import net.mcreator.backinclassic.world.DoInfiniteWaterGameRule;
-import net.mcreator.backinclassic.block.InfiniteWaterBlock;
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.world.DoInfiniteWaterGameRule;
+import net.backinclassic.block.InfiniteWaterBlock;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 

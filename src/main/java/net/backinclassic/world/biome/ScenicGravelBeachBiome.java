@@ -1,5 +1,5 @@
 
-package net.mcreator.backinclassic.world.biome;
+package net.backinclassic.world.biome;
 
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -35,7 +35,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.block.Blocks;
 
-import net.mcreator.backinclassic.BackInClassicModElements;
+import net.backinclassic.BackInClassicModElements;
 
 @BackInClassicModElements.ModElement.Tag
 public class ScenicGravelBeachBiome extends BackInClassicModElements.ModElement {

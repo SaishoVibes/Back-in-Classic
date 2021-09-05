@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
@@ -13,7 +13,7 @@ import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 

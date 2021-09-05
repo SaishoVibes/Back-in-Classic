@@ -1,4 +1,4 @@
-package net.mcreator.backinclassic.procedures;
+package net.backinclassic.procedures;
 
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
@@ -6,7 +6,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
-import net.mcreator.backinclassic.BackInClassicMod;
+import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 

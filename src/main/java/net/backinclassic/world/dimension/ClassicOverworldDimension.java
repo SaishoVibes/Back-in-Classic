@@ -1,5 +1,5 @@
 
-package net.mcreator.backinclassic.world.dimension;
+package net.backinclassic.world.dimension;
 
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -15,7 +15,7 @@ import net.minecraft.client.world.DimensionRenderInfo;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Block;
 
-import net.mcreator.backinclassic.BackInClassicModElements;
+import net.backinclassic.BackInClassicModElements;
 
 import java.util.Set;
 
