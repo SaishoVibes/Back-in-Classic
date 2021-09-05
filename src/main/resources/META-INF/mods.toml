@@ -4,12 +4,12 @@ license="Academic Free License v3.0"
 
 [[mods]]
 modId="back_in_classic"
-version="0.5.0_01"
+version="0.5.3-pre"
 displayName="Back In Classic"
-credits="https://www.curseforge.com/members/mantisgaming1/"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/back-in-classic"
+credits="https://www.curseforge.com/members/saishogaming/"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/back-in-classic \n https://github.com/MantisYT5818/Back-in-Classic"
 logoFile="logo.png"
-authors="MantisYT"
+authors="Saisho (MantisYT), Charles445"
 description='''
 Bringing back Classic Features with new functions!
 '''
