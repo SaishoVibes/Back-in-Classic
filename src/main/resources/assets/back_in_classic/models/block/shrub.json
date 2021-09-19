@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "back_in_classic:blocks/shrub_single",
+    "particle": "back_in_classic:blocks/shrub_single"
+  }
+}
