@@ -61,5 +61,8 @@
   "item.back_in_classic.iron_sword": "Iron Sword",
   "item.back_in_classic.fire": "Fire",
   "block.back_in_classic.rose_flower": "Wild Rose",
-  "block.back_in_classic.shrub": "Shrub"
+  "block.back_in_classic.shrub": "Shrub",
+  "block.back_in_classic.glowing_obsidian": "Red Obsidian",
+  "block.back_in_classic.gear": "Gear",
+  "block.back_in_classic.inverse_gear": "Gear"
 }

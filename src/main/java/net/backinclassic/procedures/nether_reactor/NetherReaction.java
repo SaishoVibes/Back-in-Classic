@@ -1,4 +1,4 @@
-package net.backinclassic.procedures;
+package net.backinclassic.procedures.nether_reactor;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
@@ -17,7 +17,7 @@ import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 
-public class NetherReactionProcedure {
+public class NetherReaction {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -85,7 +85,7 @@ public class NetherReactionProcedure {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-					"fill ~-1 ~-1 ~-1 ~1 ~1 ~1 crying_obsidian replace cobblestone");
+					"fill ~-1 ~-1 ~-1 ~1 ~1 ~1 back_in_classic:glowing_obsidian replace cobblestone");
 		}
 		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
@@ -129,7 +129,7 @@ public class NetherReactionProcedure {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"setblock ~ ~ ~ obsidian");
+							"setblock ~ ~ ~ crying_obsidian");
 				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}

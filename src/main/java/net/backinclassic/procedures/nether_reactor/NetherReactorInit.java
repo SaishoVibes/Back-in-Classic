@@ -1,4 +1,4 @@
-package net.backinclassic.procedures;
+package net.backinclassic.procedures.nether_reactor;
 
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
@@ -9,7 +9,7 @@ import net.backinclassic.BackInClassicMod;
 import java.util.Map;
 import java.util.HashMap;
 
-public class NetherReactorCoreOnBlockRightClickedProcedure {
+public class NetherReactorInit {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -62,14 +62,15 @@ public class NetherReactorCoreOnBlockRightClickedProcedure {
 			LowerCheck = (boolean) (true);
 		}
 		if ((((UpperCheck == (true)) && (LowerCheck == (true)))
-				&& ((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) (z - 0)))).getBlock() == Blocks.COBBLESTONE))) {
+				&& ((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) (z - 0)))).getBlock() == Blocks.COBBLESTONE)
+                && ((world.getBlockState(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0)))).getBlock() == Blocks.AIR))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("world", world);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				NetherReactionProcedure.executeProcedure($_dependencies);
+				NetherReaction.executeProcedure($_dependencies);
 			}
 		}
 	}

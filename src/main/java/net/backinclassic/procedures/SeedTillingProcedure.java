@@ -82,11 +82,14 @@ public class SeedTillingProcedure {
 		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() instanceof HoeItem)
 				&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.GRASS_BLOCK))) {
 			if ((Math.random() >= 0.9)) {
-				if (world instanceof World && !world.isRemote()) {
+				/*if (world instanceof World && !world.isRemote()) {
 					ItemEntity entityToSpawn = new ItemEntity((World) world, x, (y + 0.8), z, new ItemStack(Items.WHEAT_SEEDS));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
-				}
+				}*/
+				ItemEntity entityToSpawn = new ItemEntity((World) world, x, (y + 0.8), z, new ItemStack(Items.WHEAT_SEEDS));
+				entityToSpawn.setPickupDelay((int) 10);
+				world.addEntity(entityToSpawn);
 			}
 		}
 	}
