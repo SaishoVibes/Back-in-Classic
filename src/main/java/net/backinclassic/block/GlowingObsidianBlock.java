@@ -45,7 +45,7 @@ public class GlowingObsidianBlock extends BackInClassicModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.GROUND).hardnessAndResistance(50f, 1200f).setLightLevel(s -> 7).harvestLevel(3)
+			super(Block.Properties.create(Material.IRON).sound(SoundType.STONE).hardnessAndResistance(50f, 1200f).setLightLevel(s -> 7).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("glowing_obsidian");
 		}
