@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "structure_advancer_tool:block/advancer"
+    },
+    "facing=east": {
+      "model": "structure_advancer_tool:block/advancer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "structure_advancer_tool:block/advancer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "structure_advancer_tool:block/advancer",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "structure_advancer_tool:block/advancer",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "structure_advancer_tool:block/advancer",
+      "x": 90
+    }
+  }
+}

@@ -11,7 +11,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.command.Commands;
 import net.minecraft.command.CommandSource;
 
-import net.backinclassic.procedures.GamemodeCommandExecutedProcedure;
+import net.backinclassic.procedures.player_relation.GamemodeCommandExecutedProcedure;
 
 import java.util.Map;
 import java.util.HashMap;

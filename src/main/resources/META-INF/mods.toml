@@ -4,7 +4,7 @@ license="Academic Free License v3.0"
 
 [[mods]]
 modId="back_in_classic"
-version="0.5.4-alpha.4"
+version="0.5.4-alpha.10"
 displayName="Back In Classic"
 credits="https://www.curseforge.com/members/saishogaming/"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/back-in-classic \n https://github.com/MantisYT5818/Back-in-Classic"
@@ -24,12 +24,6 @@ Bringing back Classic Features with new functions!
     modId="forge"
     mandatory=true
     versionRange="[36.1.0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.back_in_classic]]
-    modId="structure_advancer_tool"
-    mandatory=true
-    versionRange"[0.1.1,)"
     ordering="NONE"
     side="BOTH"
 

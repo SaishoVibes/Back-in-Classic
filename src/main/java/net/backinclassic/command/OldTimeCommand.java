@@ -11,7 +11,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.command.Commands;
 import net.minecraft.command.CommandSource;
 
-import net.backinclassic.procedures.DoTimeCommandProcedure;
+import net.backinclassic.procedures.player_relation.DoTimeCommandProcedure;
 
 import java.util.Map;
 import java.util.HashMap;

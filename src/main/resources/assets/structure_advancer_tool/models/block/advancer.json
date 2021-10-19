@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "structure_advancer_tool:blocks/advancer_side",
+    "up": "structure_advancer_tool:blocks/advancer_side",
+    "north": "structure_advancer_tool:blocks/advancer_top",
+    "east": "structure_advancer_tool:blocks/advancer_side",
+    "south": "structure_advancer_tool:blocks/advancer_bottom",
+    "west": "structure_advancer_tool:blocks/advancer_side",
+    "particle": "structure_advancer_tool:blocks/advancer_side"
+  }
+}
