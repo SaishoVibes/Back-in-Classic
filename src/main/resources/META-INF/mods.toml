@@ -20,16 +20,7 @@ Bringing back Classic Features with new functions!
     versionRange="[1.16.5]"
     ordering="NONE"
     side="BOTH"
-[[dependencies.back_in_classic]]
-    modId="forge"
-    mandatory=true
-    versionRange="[36.1.0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.back_in_classic]]
-    modId="structure_advancer_tool"
-    mandatory=true
-    versionRange"[0.1.1,)"
-    ordering="NONE"
-    side="BOTH"
+
+
+
 

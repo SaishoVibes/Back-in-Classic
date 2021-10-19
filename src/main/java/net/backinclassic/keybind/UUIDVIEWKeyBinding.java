@@ -18,7 +18,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.client.Minecraft;
 
-import net.backinclassic.procedures.player_relation.UUIDVIEWOnKeyReleasedProcedure;
+import net.backinclassic.procedures.UUIDVIEWOnKeyReleasedProcedure;
 import net.backinclassic.BackInClassicModElements;
 import net.backinclassic.BackInClassicMod;
 

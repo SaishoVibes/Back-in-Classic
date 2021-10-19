@@ -1,4 +1,4 @@
-package net.backinclassic.procedures.player_relation;
+package net.backinclassic.procedures;
 
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.entity.player.PlayerEntity;

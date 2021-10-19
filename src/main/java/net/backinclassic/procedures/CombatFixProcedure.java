@@ -1,4 +1,4 @@
-package net.backinclassic.procedures.player_relation;
+package net.backinclassic.procedures;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;

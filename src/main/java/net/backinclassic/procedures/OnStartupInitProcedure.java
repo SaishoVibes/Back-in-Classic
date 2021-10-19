@@ -1,4 +1,4 @@
-package net.backinclassic.procedures.player_relation;
+package net.backinclassic.procedures;
 
 import com.backinclassic.PacketHandler;
 import com.backinclassic.EventHandler;
