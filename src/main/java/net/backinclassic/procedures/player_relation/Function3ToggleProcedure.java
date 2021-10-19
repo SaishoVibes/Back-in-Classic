@@ -1,4 +1,4 @@
-package net.backinclassic.procedures;
+package net.backinclassic.procedures.player_relation;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

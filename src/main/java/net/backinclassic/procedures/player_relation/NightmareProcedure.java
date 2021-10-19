@@ -1,4 +1,4 @@
-package net.backinclassic.procedures;
+.player_relationpackage net.backinclassic.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
