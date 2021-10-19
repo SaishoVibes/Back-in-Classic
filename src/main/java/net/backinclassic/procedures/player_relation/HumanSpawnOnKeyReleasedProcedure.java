@@ -1,4 +1,4 @@
-package net.backinclassic.procedures;
+package net.backinclassic.procedures.player_relation;
 
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
