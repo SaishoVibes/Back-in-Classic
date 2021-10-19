@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "back_in_classic:block/gear",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "back_in_classic:block/gear",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "back_in_classic:block/gear",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "back_in_classic:block/gear",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "back_in_classic:block/gear"
+    },
+    "facing=west": {
+      "model": "back_in_classic:block/gear",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

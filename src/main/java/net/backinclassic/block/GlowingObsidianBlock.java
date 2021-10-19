@@ -22,7 +22,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.backinclassic.procedures.nether_reactor.NetherReactorInit;
+//import net.backinclassic.procedures.NetherReactorInit;
 import net.backinclassic.BackInClassicModElements;
 
 import java.util.Map;
@@ -31,10 +31,10 @@ import java.util.HashMap;
 import java.util.Collections;
 
 @BackInClassicModElements.ModElement.Tag
-public class NetherReactorCoreBlock extends BackInClassicModElements.ModElement {
-	@ObjectHolder("back_in_classic:nether_reactor_core")
+public class GlowingObsidianBlock extends BackInClassicModElements.ModElement {
+	@ObjectHolder("back_in_classic:glowing_obsidian")
 	public static final Block block = null;
-	public NetherReactorCoreBlock(BackInClassicModElements instance) {
+	public GlowingObsidianBlock(BackInClassicModElements instance) {
 		super(instance, 17);
 	}
 
@@ -45,9 +45,9 @@ public class NetherReactorCoreBlock extends BackInClassicModElements.ModElement 
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).setLightLevel(s -> 7).harvestLevel(1)
+			super(Block.Properties.create(Material.IRON).sound(SoundType.STONE).hardnessAndResistance(50f, 1200f).setLightLevel(s -> 7).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("nether_reactor_core");
+			setRegistryName("glowing_obsidian");
 		}
 
 		@Override
@@ -80,7 +80,7 @@ public class NetherReactorCoreBlock extends BackInClassicModElements.ModElement 
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				NetherReactorInit.executeProcedure($_dependencies);
+				//NetherReactorCoreOnBlockRightClickedProcedure.executeProcedure($_dependencies);
 			}
 			return ActionResultType.SUCCESS;
 		}
