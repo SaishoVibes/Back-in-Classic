@@ -4,7 +4,7 @@
     "subtitle": "subtitles.birds_chirping",
     "sounds": [
       {
-        "name": "back_in_classic:birds_screaming_loop",
+        "name": "back_in_classic:birds",
         "stream": false
       }
     ]
@@ -14,14 +14,14 @@
     "subtitle": "subtitles.cave_chimes",
     "sounds": [
       {
-        "name": "back_in_classic:cave_chimes",
+        "name": "back_in_classic:chimes",
         "stream": false
       }
     ]
   },
   "ocean_loop": {
     "category": "ambient",
-    "subtitle": "subtitles.ocean_loop",
+    "subtitle": "subtitles.ocean",
     "sounds": [
       {
         "name": "back_in_classic:ocean",
@@ -50,7 +50,7 @@
     ]
   },
   "human_death": {
-    "category": "master",
+    "category": "hostile",
     "subtitle": "subtitles.human_death",
     "sounds": [
       {
@@ -60,12 +60,32 @@
     ]
   },
   "human_oof": {
-    "category": "master",
+    "category": "hostile",
     "subtitle": "subtitles.human_oof",
     "sounds": [
       {
         "name": "back_in_classic:hurt_old",
         "stream": false
+      }
+    ]
+  },
+  "flake": {
+    "category": "music",
+    "subtitle": "subtitles.flake",
+    "sounds": [
+      {
+        "name": "back_in_classic:flake",
+        "stream": true
+      }
+    ]
+  },
+  "kyoto": {
+    "category": "music",
+    "subtitle": "subtitles.kyoto",
+    "sounds": [
+      {
+        "name": "back_in_classic:kyoto",
+        "stream": true
       }
     ]
   }
