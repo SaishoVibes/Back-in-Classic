@@ -182,7 +182,7 @@ public class InstaBowShotProcedure {
 			if ((Math.random() >= 0.2)) {
 				if (world instanceof World && !world.isRemote()) {
 					((World) world)
-							.playSound(null, new BlockPos((int) (x + 0), (int) y, (int) (z + 0)),
+							.playSound(null, new BlockPos((float) (x + 0.5), (float) y, (float) (z + 0.5)),
 									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
 											.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
 									SoundCategory.NEUTRAL, (float) 1, (float) 1);
@@ -194,7 +194,7 @@ public class InstaBowShotProcedure {
 				}
 			} else if ((Math.random() >= 0.1)) {
 				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) (x + 0), (int) y, (int) (z + 0)),
+					((World) world).playSound(null, new BlockPos((float) (x + 0.5), (float) y, (float) (z + 0.5)),
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
 									.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
 							SoundCategory.NEUTRAL, (float) (1 - (Math.random() + 0.5)), (float) (1 - (Math.random() + 0.5)));
@@ -206,7 +206,7 @@ public class InstaBowShotProcedure {
 				}
 			} else {
 				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) (x + 0), (int) y, (int) (z + 0)),
+					((World) world).playSound(null, new BlockPos((float) (x + 0.5), (float) y, (float) (z + 0.5)),
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
 									.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
 							SoundCategory.NEUTRAL, (float) (1 + (Math.random() - 0.5)), (float) (1 + (Math.random() - 0.5)));
