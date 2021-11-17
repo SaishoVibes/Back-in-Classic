@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "back_in_classic:blocks/glowing_obsidian",
+    "up": "back_in_classic:blocks/glowing_obsidian",
+    "north": "back_in_classic:blocks/glowing_obsidian",
+    "east": "back_in_classic:blocks/glowing_obsidian",
+    "south": "back_in_classic:blocks/glowing_obsidian",
+    "west": "back_in_classic:blocks/glowing_obsidian",
+    "particle": "back_in_classic:blocks/glowing_obsidian"
+  }
+}

@@ -22,7 +22,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.backinclassic.procedures.NetherReactorCoreOnBlockRightClickedProcedure;
+import net.backinclassic.procedures.nether_reactor.NetherReactorInit;
 import net.backinclassic.BackInClassicModElements;
 
 import java.util.Map;
@@ -80,7 +80,7 @@ public class NetherReactorCoreBlock extends BackInClassicModElements.ModElement 
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				NetherReactorCoreOnBlockRightClickedProcedure.executeProcedure($_dependencies);
+				NetherReactorInit.executeProcedure($_dependencies);
 			}
 			return ActionResultType.SUCCESS;
 		}
