@@ -181,40 +181,39 @@ public class InstaBowShotProcedure {
 						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(), (int) 2);
 			if ((Math.random() >= 0.2)) {
 				if (world instanceof World && !world.isRemote()) {
-					((World) world)
-							.playSound(null, new BlockPos((float) (x + 0.5), (float) y, (float) (z + 0.5)),
-									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-											.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
-									SoundCategory.NEUTRAL, (float) 1, (float) 1);
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"playsound back_in_classic:instant_bow_shot player @p ~ ~ ~ .75 1");
 				} else {
-					((World) world).playSound((x + 0), y, (z + 0),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-									.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"playsound back_in_classic:instant_bow_shot player @a ~ ~ ~ .75 1");
 				}
 			} else if ((Math.random() >= 0.1)) {
 				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((float) (x + 0.5), (float) y, (float) (z + 0.5)),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-									.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
-							SoundCategory.NEUTRAL, (float) (1 - (Math.random() + 0.5)), (float) (1 - (Math.random() + 0.5)));
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"playsound back_in_classic:instant_bow_shot player @p ~ ~ ~ .75 1.25");
 				} else {
-					((World) world).playSound((x + 0), y, (z + 0),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-									.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
-							SoundCategory.NEUTRAL, (float) (1 - (Math.random() + 0.5)), (float) (1 - (Math.random() + 0.5)), false);
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"playsound back_in_classic:instant_bow_shot player @a ~ ~ ~ .75 1.25");
 				}
 			} else {
 				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((float) (x + 0.5), (float) y, (float) (z + 0.5)),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-									.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
-							SoundCategory.NEUTRAL, (float) (1 + (Math.random() - 0.5)), (float) (1 + (Math.random() - 0.5)));
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"playsound back_in_classic:instant_bow_shot player @p ~ ~ ~ .75 .75");
 				} else {
-					((World) world).playSound((x + 0), y, (z + 0),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-									.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
-							SoundCategory.NEUTRAL, (float) (1 + (Math.random() - 0.5)), (float) (1 + (Math.random() - 0.5)), false);
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"playsound back_in_classic:instant_bow_shot player @a ~ ~ ~ .75 .75");
 				}
 			}
 		}
