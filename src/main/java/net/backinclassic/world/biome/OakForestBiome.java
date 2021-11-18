@@ -68,7 +68,7 @@ public class OakForestBiome extends BackInClassicModElements.ModElement {
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-3355393).setWaterColor(-13434625).setWaterFogColor(-13434625)
-						.withSkyColor(-3355393).withFoliageColor(-16737997).withGrassColor(-16737997).build();
+						.withSkyColor(-8475649).withFoliageColor(-16737997).withGrassColor(-16737997).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(Blocks.GRASS_BLOCK.getDefaultState(),
 								Blocks.DIRT.getDefaultState(), Blocks.DIRT.getDefaultState())));
