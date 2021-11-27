@@ -3,6 +3,7 @@ package net.backinclassic.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
