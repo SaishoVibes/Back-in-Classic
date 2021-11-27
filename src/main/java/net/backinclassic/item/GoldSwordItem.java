@@ -15,7 +15,7 @@ import net.backinclassic.BackInClassicModElements;
 
 @BackInClassicModElements.ModElement.Tag
 public class GoldSwordItem extends BackInClassicModElements.ModElement {
-	@ObjectHolder("back_in_classic:gold_sword")
+	@ObjectHolder("back_in_classic:extreme_gold_sword")
 	public static final Item block = null;
 	public GoldSwordItem(BackInClassicModElements instance) {
 		super(instance, 24);
@@ -33,7 +33,7 @@ public class GoldSwordItem extends BackInClassicModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 3f;
+				return 4f;
 			}
 
 			public int getHarvestLevel() {
@@ -48,6 +48,6 @@ public class GoldSwordItem extends BackInClassicModElements.ModElement {
 				return Ingredient.fromStacks(new ItemStack(Items.IRON_INGOT));
 			}
 		}, 3, 16f, new Item.Properties().group(ItemGroup.TOOLS)) {
-		}.setRegistryName("gold_sword"));
+		}.setRegistryName("extreme_gold_sword"));
 	}
 }

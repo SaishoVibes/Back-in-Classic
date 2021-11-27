@@ -15,7 +15,7 @@ import net.backinclassic.BackInClassicModElements;
 
 @BackInClassicModElements.ModElement.Tag
 public class WoodSwordItem extends BackInClassicModElements.ModElement {
-	@ObjectHolder("back_in_classic:wood_sword")
+	@ObjectHolder("back_in_classic:extreme_wood_sword")
 	public static final Item block = null;
 	public WoodSwordItem(BackInClassicModElements instance) {
 		super(instance, 21);
@@ -33,7 +33,7 @@ public class WoodSwordItem extends BackInClassicModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 2f;
+				return 4f;
 			}
 
 			public int getHarvestLevel() {
@@ -48,6 +48,6 @@ public class WoodSwordItem extends BackInClassicModElements.ModElement {
 				return Ingredient.fromStacks(new ItemStack(Items.STICK));
 			}
 		}, 3, 16f, new Item.Properties().group(ItemGroup.TOOLS)) {
-		}.setRegistryName("wood_sword"));
+		}.setRegistryName("extreme_wood_sword"));
 	}
 }

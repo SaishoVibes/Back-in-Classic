@@ -15,7 +15,7 @@ import net.backinclassic.BackInClassicModElements;
 
 @BackInClassicModElements.ModElement.Tag
 public class DiamondSwordItem extends BackInClassicModElements.ModElement {
-	@ObjectHolder("back_in_classic:diamond_sword")
+	@ObjectHolder("back_in_classic:extreme_diamond_sword")
 	public static final Item block = null;
 	public DiamondSwordItem(BackInClassicModElements instance) {
 		super(instance, 25);
@@ -33,7 +33,7 @@ public class DiamondSwordItem extends BackInClassicModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 5f;
+				return 7f;
 			}
 
 			public int getHarvestLevel() {
@@ -48,6 +48,6 @@ public class DiamondSwordItem extends BackInClassicModElements.ModElement {
 				return Ingredient.fromStacks(new ItemStack(Items.DIAMOND));
 			}
 		}, 3, 16f, new Item.Properties().group(ItemGroup.TOOLS)) {
-		}.setRegistryName("diamond_sword"));
+		}.setRegistryName("extreme_diamond_sword"));
 	}
 }
