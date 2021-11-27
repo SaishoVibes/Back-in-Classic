@@ -12,7 +12,6 @@ apply plugin: 'eclipse'
 
 version = '0.6.0-alpha.2'
 
-
 group = 'com.saisho.backinclassic'
 archivesBaseName = 'backinclassic'
 
