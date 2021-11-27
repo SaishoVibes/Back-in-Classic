@@ -33,7 +33,7 @@ public class DiamondSwordItem extends BackInClassicModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 7f;
+				return 3f;
 			}
 
 			public int getHarvestLevel() {

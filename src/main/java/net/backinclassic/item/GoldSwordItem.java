@@ -33,7 +33,7 @@ public class GoldSwordItem extends BackInClassicModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 4f;
+				return 1f;
 			}
 
 			public int getHarvestLevel() {
