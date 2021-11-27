@@ -10,7 +10,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 
-version = '0.5.5-alpha.2'
+version = '0.5.5-beta.1'
 
 group = 'com.saisho.backinclassic'
 archivesBaseName = 'backinclassic'
