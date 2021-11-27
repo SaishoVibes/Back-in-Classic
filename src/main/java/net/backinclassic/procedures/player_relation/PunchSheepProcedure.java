@@ -103,13 +103,31 @@ public class PunchSheepProcedure {
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				for (int index0 = 0; index0 < (int) (Math.round((2 * Math.random()))); index0++) {
+                if ((Math.random() >= 0.66)) {
+                    if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
+                    if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
+                } else if ((Math.random() >= 0.33)) {
+                    if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
+                }
+				/*for (int index0 = 0; index0 < (int) (Math.round((2 * Math.random()))); index0++) {
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
 						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}
-				}
+				}*/
 			}
 		}
 	}

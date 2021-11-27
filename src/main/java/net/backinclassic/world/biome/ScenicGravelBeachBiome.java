@@ -49,7 +49,7 @@ public class ScenicGravelBeachBiome extends BackInClassicModElements.ModElement 
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-3355393).setWaterColor(-13421569).setWaterFogColor(-10066177)
-						.withSkyColor(-3355393).withFoliageColor(-16738048).withGrassColor(-16738048).build();
+						.withSkyColor(-8475659).withFoliageColor(-16738048).withGrassColor(-16738048).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(Blocks.GRAVEL.getDefaultState(),
 								Blocks.GRAVEL.getDefaultState(), Blocks.GRAVEL.getDefaultState())));

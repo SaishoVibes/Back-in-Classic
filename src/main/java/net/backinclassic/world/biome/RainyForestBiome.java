@@ -56,7 +56,7 @@ public class RainyForestBiome extends BackInClassicModElements.ModElement {
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-3342337).setWaterColor(-16776961).setWaterFogColor(-13421569)
-						.withSkyColor(-3342337).withFoliageColor(-16738048).withGrassColor(-16738048)
+						.withSkyColor(-8475649).withFoliageColor(-16738048).withGrassColor(-16738048)
 						.setMoodSound(new MoodSoundAmbience((net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
 								.getValue(new ResourceLocation("back_in_classic:birds_chirping")), 6000, 8, 2))
 						.build();
