@@ -9,7 +9,6 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
-
 version = '0.6.0-alpha.1'
 
 
