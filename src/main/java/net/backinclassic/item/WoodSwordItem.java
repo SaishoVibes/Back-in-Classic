@@ -33,7 +33,7 @@ public class WoodSwordItem extends BackInClassicModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 1f;
+				return 0f;
 			}
 
 			public int getHarvestLevel() {
