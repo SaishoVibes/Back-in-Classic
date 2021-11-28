@@ -98,12 +98,34 @@ public class PunchSheepProcedure {
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/data merge entity @e[type=sheep,limit=1,distance=..1] {Sheared:1b}");
 				}
+                // Using the below to copy the command easily
+                /*if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"/execute if entity @e[nbt={Sheared:1b},distance=..1] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:white_wool",Count:1b}}");
+				}*/
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
-					entityToSpawn.setPickupDelay((int) 10);
-					world.addEntity(entityToSpawn);
-				}
+						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
                 if ((Math.random() >= 0.66)) {
+                    /*if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"/execute if entity @e[nbt={Sheared:1b},limit=1,distance=..1] run summon minecraft:item ~ ~ ~ {Item:{id:\"minecraft:white_wool\",Count:1b}}");
+                    }
+                    if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"/execute if entity @e[nbt={Sheared:1b},limit=1,distance=..1] run summon minecraft:item ~ ~ ~ {Item:{id:\"minecraft:white_wool\",Count:1b}}");
+                    }
+                    
+                    //Line here to break apart the code*//*
+                    
                     if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
 						entityToSpawn.setPickupDelay((int) 10);
@@ -113,13 +135,22 @@ public class PunchSheepProcedure {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
 						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
-					}
+					}*/
                 } else if ((Math.random() >= 0.33)) {
+                    /*if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"/execute if entity @e[nbt={Sheared:1b},limit=1,distance=..1] run summon minecraft:item ~ ~ ~ {Item:{id:\"minecraft:white_wool\",Count:1b}}");
+                    }
+                    
+                    //Line here to break apart the code*//*
+                    
                     if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
 						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
-					}
+					}*/
                 }
 				/*for (int index0 = 0; index0 < (int) (Math.round((2 * Math.random()))); index0++) {
 					if (world instanceof World && !world.isRemote()) {
