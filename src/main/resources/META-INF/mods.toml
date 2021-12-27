@@ -4,10 +4,11 @@ license="Academic Free License v3.0"
 
 [[mods]]
 modId="back_in_classic"
-version="0.5.5-release"
+version="0.6.0-release"
+
 displayName="Back In Classic"
 credits="https://www.curseforge.com/members/saishogaming/"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/back-in-classic \n https://github.com/MantisYT5818/Back-in-Classic"
+displayURL=" https://www.curseforge.com/minecraft/mc-mods/back-in-classic \n https://github.com/MantisYT5818/Back-in-Classic"
 logoFile="logo.png"
 authors="Saisho (MantisYT), Charles445"
 description='''

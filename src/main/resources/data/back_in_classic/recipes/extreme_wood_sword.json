@@ -1,0 +1,24 @@
+{
+  "group": "back_in_classic",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    "42 ",
+    "34 "
+  ],
+  "key": {
+    "2": {
+      "tag": "minecraft:logs"
+    },
+    "3": {
+      "item": "minecraft:stick"
+    },
+    "4": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "back_in_classic:extreme_wood_sword",
+    "count": 1
+  }
+}
