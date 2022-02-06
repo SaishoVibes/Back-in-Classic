@@ -93,7 +93,7 @@ public class RoseFlowerBlock extends BackInClassicModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == World.OVERWORLD)
+					if ((dimensionType == World.OVERWORLD) && (Math.random() >= 0.66))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;

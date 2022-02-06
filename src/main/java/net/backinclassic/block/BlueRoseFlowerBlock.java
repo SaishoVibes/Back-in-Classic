@@ -91,8 +91,19 @@ public class BlueRoseFlowerBlock extends BackInClassicModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == World.OVERWORLD)
-						dimensionCriteria = true;
+					if ((dimensionType == World.OVERWORLD) && (Math.random() >= 0.33))
+                    {
+                        /*if (((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) (z + 0)))).getBlock() == Blocks.GRASS_BLOCK.getDefaultState()
+						.getBlock()))
+                        {
+                            if (Math.random() >= 0.50)
+                                dimensionCriteria = true;
+                            else dimensionCriteria = false;
+                        }
+                        else dimensionCriteria = true;*/
+                        dimensionCriteria = true;
+                    }
+						
 					if (!dimensionCriteria)
 						return false;
 					int x = pos.getX();
@@ -141,12 +152,12 @@ public class BlueRoseFlowerBlock extends BackInClassicModElements.ModElement {
 			return Collections.singletonList(new ItemStack(this, 1));
 		}
 
-		@Override
+		/*@Override
 		public boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
 			Block ground = state.getBlock();
 			return (ground == Blocks.STONE || ground == Blocks.GRANITE || ground == Blocks.DIORITE || ground == Blocks.ANDESITE
 					|| ground == Blocks.DIRT || ground == Blocks.COARSE_DIRT);
-		}
+		}*/
 
 		@Override
 		public boolean isValidPosition(BlockState blockstate, IWorldReader worldIn, BlockPos pos) {
