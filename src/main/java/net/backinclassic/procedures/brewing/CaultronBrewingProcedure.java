@@ -14,12 +14,15 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
 import net.backinclassic.block.AwkwardCauldronBlock;
+import net.backinclassic.block.SpeedCauldronBlock;
+import net.backinclassic.block.JumpingCauldronBlock;
+import net.backinclassic.block.SlownessCauldronBlock;
 import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
 import java.util.HashMap;
 
-public class CaultrontoawkwardProcedure {
+public class CaultronBrewingProcedure {
 	@Mod.EventBusSubscriber
 	private static class GlobalTrigger {
 		@SubscribeEvent
@@ -73,10 +76,29 @@ public class CaultrontoawkwardProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.POTION)
+		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == new ItemStack(Items.NETHER_WART, (int) (1)).getItem())
 				&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.CAULDRON))) {
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), AwkwardCauldronBlock.block.getDefaultState(), 3);
 			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+		}
+        if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
+			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == new ItemStack(Items.SUGAR, (int) (1)).getItem())) {
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), SpeedCauldronBlock.block.getDefaultState(), 3);
+			}
+		}
+        if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SpeedCauldronBlock.block.getDefaultState().getBlock()) || 
+                ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == JumpingCauldronBlock.block.getDefaultState().getBlock())) {
+			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == new ItemStack(Items.FERMENTED_SPIDER_EYE, (int) (1)).getItem())) {
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), SlownessCauldronBlock.block.getDefaultState(), 3);
+			}
+		}
+        if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
+			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == new ItemStack(Items.RABBIT_FOOT, (int) (1)).getItem())) {
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), JumpingCauldronBlock.block.getDefaultState(), 3);
+			}
 		}
 	}
 }
