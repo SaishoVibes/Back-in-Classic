@@ -152,12 +152,14 @@ public class BlueRoseFlowerBlock extends BackInClassicModElements.ModElement {
 			return Collections.singletonList(new ItemStack(this, 1));
 		}
 
-		/*@Override
+		@Override
 		public boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
 			Block ground = state.getBlock();
 			return (ground == Blocks.STONE || ground == Blocks.GRANITE || ground == Blocks.DIORITE || ground == Blocks.ANDESITE
-					|| ground == Blocks.DIRT || ground == Blocks.COARSE_DIRT);
-		}*/
+					|| ground == Blocks.DIRT || ground == Blocks.COARSE_DIRT || ground == Blocks.GRASS_BLOCK || ground == Blocks.GRAVEL 
+                    || ground == Blocks.CLAY || ground == Blocks.MYCELIUM || ground == Blocks.SAND || ground == Blocks.RED_SAND 
+                    || ground == Blocks.SANDSTONE || ground == Blocks.RED_SANDSTONE);
+		}
 
 		@Override
 		public boolean isValidPosition(BlockState blockstate, IWorldReader worldIn, BlockPos pos) {
