@@ -99,6 +99,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:fire_resistance\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == HarmingCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -110,6 +111,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:harming\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == HealingCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -121,6 +123,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:healing\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == InvisibleCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -132,6 +135,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:invisibility\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == JumpingCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -143,6 +147,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:leaping\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == NightCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -154,6 +159,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:night_vision\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == PoisonCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -165,6 +171,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:poison\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RegenCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -176,6 +183,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:regeneration\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SlownessCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -187,6 +195,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:slowness\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SpeedCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -198,6 +207,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:swiftness\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SlowfallCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -209,6 +219,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:slow_falling\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == StrengthCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -220,6 +231,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:strength\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == WaterCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -231,6 +243,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:water_breathing\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == WeaknessCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -242,6 +255,7 @@ public class CauldronBottleProcedure {
 								"give @s potion{Potion:\"minecraft:weakness\"} 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
             if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
@@ -253,6 +267,7 @@ public class CauldronBottleProcedure {
 								"give @s potion 1");
 					}
 				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
 		}
 	}

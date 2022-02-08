@@ -65,15 +65,15 @@ public class AwkwardCauldronBlock extends BackInClassicModElements.ModElement {
     
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 7).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE).setRequiresTool());
+			super(Block.Properties.create(Material.IRON).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).setLightLevel(s -> 0).notSolid()
+					.setOpaque((bs, br, bp) -> false).harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("awkward_cauldron");
 		}
 
-		@Override
+		/*@Override
 		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
 			return 15;
-		}
+		}*/
 
 		@Override
 		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {

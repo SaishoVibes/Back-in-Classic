@@ -65,8 +65,8 @@ public class InvisibleCauldronBlock extends BackInClassicModElements.ModElement 
     
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 7).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE).setRequiresTool());
+			super(Block.Properties.create(Material.IRON).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).setLightLevel(s -> 0).notSolid()
+					.setOpaque((bs, br, bp) -> false).harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("invis_cauldron");
 		}
 

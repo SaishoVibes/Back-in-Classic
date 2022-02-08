@@ -116,6 +116,20 @@ public class PaeoniaFlowerBlock extends BackInClassicModElements.ModElement {
 			biomeCriteria = true;
 		if (new ResourceLocation("birch_forest_hills").equals(event.getName()))
 			biomeCriteria = true;
+        if (new ResourceLocation("flower_forest").equals(event.getName()))
+			biomeCriteria = true;
+        if (new ResourceLocation("taiga").equals(event.getName()))
+			biomeCriteria = true;
+        if (new ResourceLocation("swamp_hills").equals(event.getName()))
+			biomeCriteria = true;
+        if (new ResourceLocation("taiga_hills").equals(event.getName()))
+			biomeCriteria = true;
+        if (new ResourceLocation("taiga_mountains").equals(event.getName()))
+			biomeCriteria = true;
+        if (new ResourceLocation("tall_birch_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("tall_birch_hills").equals(event.getName()))
+			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> configuredFeature);
