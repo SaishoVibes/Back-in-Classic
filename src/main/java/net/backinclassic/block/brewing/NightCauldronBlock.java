@@ -1,5 +1,5 @@
 
-package net.backinclassic.block;
+package net.backinclassic.block.brewing;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
@@ -44,10 +44,10 @@ import java.util.HashMap;
 import java.util.Collections;
 
 @BackInClassicModElements.ModElement.Tag
-public class SlownessCauldronBlock extends BackInClassicModElements.ModElement {
-	@ObjectHolder("back_in_classic:slow_cauldron")
+public class NightCauldronBlock extends BackInClassicModElements.ModElement {
+	@ObjectHolder("back_in_classic:night_cauldron")
 	public static final Block block = null;
-	public SlownessCauldronBlock(BackInClassicModElements instance) {
+	public NightCauldronBlock(BackInClassicModElements instance) {
 		super(instance, 17);
 	}
 
@@ -67,7 +67,7 @@ public class SlownessCauldronBlock extends BackInClassicModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).setLightLevel(s -> 0).notSolid()
 					.setOpaque((bs, br, bp) -> false).harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("slow_cauldron");
+			setRegistryName("night_cauldron");
 		}
 
 		@Override

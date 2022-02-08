@@ -1,5 +1,5 @@
 
-package net.backinclassic.block;
+package net.backinclassic.block.brewing;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
@@ -44,10 +44,10 @@ import java.util.HashMap;
 import java.util.Collections;
 
 @BackInClassicModElements.ModElement.Tag
-public class WeaknessCauldronBlock extends BackInClassicModElements.ModElement {
-	@ObjectHolder("back_in_classic:weakness_cauldron")
+public class WaterCauldronBlock extends BackInClassicModElements.ModElement {
+	@ObjectHolder("back_in_classic:water_cauldron")
 	public static final Block block = null;
-	public WeaknessCauldronBlock(BackInClassicModElements instance) {
+	public WaterCauldronBlock(BackInClassicModElements instance) {
 		super(instance, 17);
 	}
 
@@ -67,7 +67,7 @@ public class WeaknessCauldronBlock extends BackInClassicModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).setLightLevel(s -> 0).notSolid()
 					.setOpaque((bs, br, bp) -> false).harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("weakness_cauldron");
+			setRegistryName("water_cauldron");
 		}
 
 		@Override

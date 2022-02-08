@@ -91,12 +91,20 @@ public class CauldronBrewingProcedure {
 				&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.CAULDRON))) {
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), AwkwardCauldronBlock.block.getDefaultState(), 3);
 			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+            if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
 			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == new ItemStack(Items.SUGAR, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), SpeedCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SpeedCauldronBlock.block.getDefaultState().getBlock()) || 
@@ -105,6 +113,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.FERMENTED_SPIDER_EYE, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), SlownessCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
@@ -112,6 +124,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.RABBIT_FOOT, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), JumpingCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
@@ -119,6 +135,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.BLAZE_POWDER, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), StrengthCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
@@ -126,6 +146,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.NETHER_WART, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WeaknessCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
@@ -133,6 +157,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.GLISTERING_MELON_SLICE, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), HealingCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
@@ -140,6 +168,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.SPIDER_EYE, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), PoisonCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == PoisonCauldronBlock.block.getDefaultState().getBlock()) || 
@@ -148,6 +180,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.FERMENTED_SPIDER_EYE, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), HarmingCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
@@ -155,6 +191,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.GHAST_TEAR, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), RegenCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
@@ -162,6 +202,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.MAGMA_CREAM, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), FireCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
@@ -169,6 +213,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.PUFFERFISH, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WaterCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
@@ -176,6 +224,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.GOLDEN_CARROT, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), NightCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == NightCauldronBlock.block.getDefaultState().getBlock())) {
@@ -183,6 +235,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.FERMENTED_SPIDER_EYE, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), InvisibleCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
@@ -190,6 +246,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.PHANTOM_MEMBRANE, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), PoisonCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
         if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
@@ -197,6 +257,10 @@ public class CauldronBrewingProcedure {
 					.getItem() == new ItemStack(Items.FERMENTED_SPIDER_EYE, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WeaknessCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+                if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).getCooldownTracker().setCooldown(
+							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
+							(int) 20);
 			}
 		}
 	}

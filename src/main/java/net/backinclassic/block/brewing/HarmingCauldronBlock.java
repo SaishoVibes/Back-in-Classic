@@ -1,5 +1,5 @@
 
-package net.backinclassic.block;
+package net.backinclassic.block.brewing;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
