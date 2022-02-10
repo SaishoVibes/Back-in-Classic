@@ -129,18 +129,13 @@ public class PunchSheepProcedure {
                     */
                     //Line here to break apart the code/*
                     
-                    if (world instanceof World && !world.isRemote()) {
-						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
-						entityToSpawn.setPickupDelay((int) 10);
-						world.addEntity(entityToSpawn);
-					}
-                    if (world instanceof World && !world.isRemote()) {
+                    if ((world instanceof World && !world.isRemote()) && (Math.random() >= 0.5)) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
 						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}//*/
                 }
-                if ((Math.random() >= 0.33)) {
+                if ((Math.random() >= 0.5)) {
                     /*if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
@@ -156,6 +151,11 @@ public class PunchSheepProcedure {
 						world.addEntity(entityToSpawn);
 					}//*/
                 }
+                if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
 				/*for (int index0 = 0; index0 < (int) (Math.round((2 * Math.random()))); index0++) {
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
