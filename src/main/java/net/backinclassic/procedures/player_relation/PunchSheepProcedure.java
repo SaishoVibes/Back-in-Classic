@@ -2,7 +2,7 @@ package net.backinclassic.procedures.player_relation;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
@@ -15,6 +15,7 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
@@ -29,7 +30,7 @@ public class PunchSheepProcedure {
 	@Mod.EventBusSubscriber
 	private static class GlobalTrigger {
 		@SubscribeEvent
-		public static void onEntityAttacked(LivingAttackEvent event) {
+		public static void onEntityAttacked(LivingHurtEvent event) {
 			if (event != null && event.getEntity() != null) {
 				Entity entity = event.getEntity();
 				Entity sourceentity = event.getSource().getTrueSource();
@@ -90,7 +91,9 @@ public class PunchSheepProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((sourceentity instanceof PlayerEntity) || (sourceentity instanceof ServerPlayerEntity))) {
+		if (((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1)
+				- ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1)) == 0) && (entity instanceof SheepEntity))
+				&& ((sourceentity instanceof ServerPlayerEntity) && (sourceentity instanceof PlayerEntity)))) {
 			if ((entity instanceof SheepEntity)) {
 				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
