@@ -89,7 +89,7 @@ public class RegenCauldronBlock extends BackInClassicModElements.ModElement {
 		}
 
 
-		@Override
+		/*@Override
 		public ActionResultType onBlockActivated(BlockState blockstate, World world, BlockPos pos, PlayerEntity entity, Hand hand,
 				BlockRayTraceResult hit) {
 			super.onBlockActivated(blockstate, world, pos, entity, hand, hit);
@@ -110,6 +110,6 @@ public class RegenCauldronBlock extends BackInClassicModElements.ModElement {
 				awkward_to_more.executeProcedure($_dependencies);
 			}
 			return ActionResultType.SUCCESS;
-		}
+		}*/
 	}
 }

@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.backinclassic.block.AwkwardCauldronBlock;
+import net.backinclassic.block.brewing.AwkwardCauldronBlock;
 import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
@@ -44,8 +44,8 @@ public class awkward_to_more {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.NETHER_WART)) {
+		/*if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.NETHER_WART)) {
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), AwkwardCauldronBlock.block.getDefaultState(), 3);
-		}
+		}*/
 	}
 }
