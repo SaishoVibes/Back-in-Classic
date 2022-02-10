@@ -87,7 +87,7 @@ public class CauldronBrewingProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == new ItemStack(Items.POTION, (int) (1)).getItem())
+		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == new ItemStack(Items.NETHER_WART, (int) (1)).getItem())
 				&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.CAULDRON))) {
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), AwkwardCauldronBlock.block.getDefaultState(), 3);
 			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
@@ -134,17 +134,6 @@ public class CauldronBrewingProcedure {
 			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == new ItemStack(Items.BLAZE_POWDER, (int) (1)).getItem())) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), StrengthCauldronBlock.block.getDefaultState(), 3);
-                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
-                if (entity instanceof PlayerEntity)
-					((PlayerEntity) entity).getCooldownTracker().setCooldown(
-							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
-							(int) 20);
-			}
-		}
-        if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AwkwardCauldronBlock.block.getDefaultState().getBlock())) {
-			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == new ItemStack(Items.NETHER_WART, (int) (1)).getItem())) {
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WeaknessCauldronBlock.block.getDefaultState(), 3);
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
                 if (entity instanceof PlayerEntity)
 					((PlayerEntity) entity).getCooldownTracker().setCooldown(
