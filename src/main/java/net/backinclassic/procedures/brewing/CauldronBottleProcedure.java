@@ -19,6 +19,9 @@ import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.backinclassic.block.brewing.AwkwardCauldronBlock;
 import net.backinclassic.block.brewing.SpeedCauldronBlock;
@@ -284,11 +287,11 @@ public class CauldronBottleProcedure {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
 				{
 					Entity _ent = entity;
-					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-						_ent.world.getServer().getCommandManager().handleCommand(
-								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-								"give @s lava_bucket 1");
-					}
+                    if (entity instanceof PlayerEntity) {
+                        ItemStack _setstack = new ItemStack(Items.LAVA_BUCKET);
+                        _setstack.setCount((int) 1);
+                        ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+                    }
 				}
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			} 

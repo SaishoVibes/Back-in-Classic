@@ -19,6 +19,9 @@ import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.backinclassic.block.brewing.AwkwardCauldronBlock;
 import net.backinclassic.block.brewing.SpeedCauldronBlock;
@@ -268,12 +271,11 @@ public class CauldronBrewingProcedure {
 					((PlayerEntity) entity).getCooldownTracker().setCooldown(
 							(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getItem(),
 							(int) 20);
-            if (world instanceof ServerWorld) {
-					((World) world).getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"/give @p bucket");
-				}
+            if (entity instanceof PlayerEntity) {
+				ItemStack _setstack = new ItemStack(Items.BUCKET);
+				_setstack.setCount((int) 1);
+				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+			}
 		}
 	}
 }

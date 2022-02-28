@@ -77,11 +77,12 @@ public class DyeShulkerProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+        Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.WHITE_DYE)
+		if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.WHITE_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -91,7 +92,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.ORANGE_DYE)
+		if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.ORANGE_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -101,7 +102,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.MAGENTA_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.MAGENTA_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -111,7 +112,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.LIGHT_BLUE_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.LIGHT_BLUE_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -121,7 +122,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.YELLOW_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.YELLOW_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -131,7 +132,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.LIME_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.LIME_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -141,7 +142,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.PINK_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.PINK_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -151,7 +152,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.GRAY_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.GRAY_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -161,7 +162,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.LIGHT_GRAY_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.LIGHT_GRAY_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -171,7 +172,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.CYAN_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.CYAN_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -181,7 +182,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.PURPLE_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.PURPLE_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -191,7 +192,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BLUE_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BLUE_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -201,7 +202,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BROWN_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BROWN_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -211,7 +212,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.GREEN_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.GREEN_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -221,7 +222,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.RED_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.RED_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -231,7 +232,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BLACK_DYE)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BLACK_DYE)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
@@ -241,7 +242,7 @@ public class DyeShulkerProcedure {
                     (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				}
 		}
-        if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.AIR)
+        if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.AIR)
 				&& (entity instanceof ShulkerEntity))) {
 			if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
