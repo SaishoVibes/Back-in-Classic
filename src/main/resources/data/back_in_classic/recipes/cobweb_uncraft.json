@@ -1,0 +1,13 @@
+{
+  "group": "back_in_classic",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cobweb"
+    }
+  ],
+  "result": {
+    "item": "minecraft:string",
+    "count": 9
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "group": "back_in_classic",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sss",
+    "sss",
+    "sss"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "minecraft:cobweb",
+    "count": 1
+  }
+}

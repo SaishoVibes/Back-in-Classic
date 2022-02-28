@@ -12,6 +12,13 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
+import net.minecraft.command.ICommandSource;
+import net.minecraft.command.CommandSource;
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.vector.Vector2f;
 
 import net.backinclassic.block.brewing.AwkwardCauldronBlock;
 import net.backinclassic.block.brewing.SpeedCauldronBlock;
@@ -28,6 +35,7 @@ import net.backinclassic.block.brewing.SlowfallCauldronBlock;
 import net.backinclassic.block.brewing.StrengthCauldronBlock;
 import net.backinclassic.block.brewing.WaterCauldronBlock;
 import net.backinclassic.block.brewing.WeaknessCauldronBlock;
+import net.backinclassic.block.brewing.LavaCauldronBlock;
 import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
@@ -270,5 +278,20 @@ public class CauldronBottleProcedure {
                 (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			}
 		}
+        if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == new ItemStack(Items.BUCKET, (int) (1)).getItem())) {
+            if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LavaCauldronBlock.block.getDefaultState().getBlock())) {
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.CAULDRON.getDefaultState(), 3);
+				{
+					Entity _ent = entity;
+					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+						_ent.world.getServer().getCommandManager().handleCommand(
+								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+								"give @s lava_bucket 1");
+					}
+				}
+                (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
+			} 
+        }
 	}
 }
