@@ -9,12 +9,8 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
-version = '0.6.0-alpha.1'
 
-<<<<<<< Updated upstream
-=======
 version = '0.8.0-alpha.2-ex1'
->>>>>>> Stashed changes
 
 group = 'com.saisho.backinclassic'
 archivesBaseName = 'backinclassic'
@@ -23,8 +19,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 // java.toolchain.languageVersion = JavaLanguageVersion.of(16)
 
 minecraft {
-    mappings channel: 'official', version: '1.16.5'
-    //mappings channel: 'snapshot', version: '20201028-1.16.3'
+    mappings channel: 'snapshot', version: '20201028-1.16.3'
     // mappings channel: 'official', version: '1.17.1'
     runs {
         client {

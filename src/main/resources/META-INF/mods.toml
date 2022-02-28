@@ -4,7 +4,11 @@ license="Academic Free License v3.0"
 
 [[mods]]
 modId="back_in_classic"
+<<<<<<< Updated upstream
 version="0.6.0-alpha.1"
+=======
+version="0.8.0-alpha.2-ex1"
+>>>>>>> Stashed changes
 
 displayName="Back In Classic"
 credits="https://www.curseforge.com/members/saishogaming/"
