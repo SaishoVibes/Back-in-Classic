@@ -46,8 +46,8 @@ public class LavaCauldronContactProcedure {
 			}
 
 			private void run() {
-				entity.attackEntityFrom(DamageSource.LAVA, (float) 1);
-				entity.attackEntityFrom(DamageSource.IN_FIRE, (float) 1);
+				entity.attackEntityFrom(DamageSource.LAVA, (float) 3);
+				entity.attackEntityFrom(DamageSource.IN_FIRE, (float) 3);
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
 		}.start(world, (int) 5);

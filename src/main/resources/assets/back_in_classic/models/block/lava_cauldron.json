@@ -6,7 +6,7 @@
         "bottom": "back_in_classic:blocks/cauldron_bottom",
         "side": "back_in_classic:blocks/cauldron_side",
         "inside": "back_in_classic:blocks/cauldron_inner",
-        "water": "minecraft:blocks/lava_still"
+        "water": "minecraft:block/lava_still"
     },
     "elements": [
         {
