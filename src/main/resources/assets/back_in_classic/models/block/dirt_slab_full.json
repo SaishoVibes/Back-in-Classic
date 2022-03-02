@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "back_in_classic:blocks/dirt",
+    "top": "back_in_classic:blocks/dirt",
+    "side": "back_in_classic:blocks/dirt"
+  }
+}
