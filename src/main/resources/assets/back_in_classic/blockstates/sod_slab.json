@@ -6,7 +6,7 @@
     "type=top": {
       "model": "back_in_classic:block/sod_slab_top"
     },
-    "type=full": {
+    "type=double": {
       "model": "back_in_classic:block/sod_slab_full"
     }
   }
