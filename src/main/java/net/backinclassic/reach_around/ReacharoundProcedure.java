@@ -106,7 +106,8 @@ public class ReacharoundProcedure {
 			if ((!((((world.getBlockState(new BlockPos((int) (rtx - 1), (int) rty, (int) (rtz - 0)))).getBlock() == Blocks.AIR)
 					&& ((world.getBlockState(new BlockPos((int) (rtx + 1), (int) rty, (int) (rtz - 0)))).getBlock() == Blocks.AIR))
 					&& (((world.getBlockState(new BlockPos((int) (rtx - 0), (int) rty, (int) (rtz - 1)))).getBlock() == Blocks.AIR)
-							&& ((world.getBlockState(new BlockPos((int) (rtx + 0), (int) rty, (int) (rtz + 1)))).getBlock() == Blocks.AIR))))) {
+							&& ((world.getBlockState(new BlockPos((int) (rtx + 0), (int) rty, (int) (rtz + 1)))).getBlock() == Blocks.AIR)))
+                    && ((world.getBlockState(new BlockPos((int) (rtx + 0), (int) rty, (int) (rtz + 0)))).getBlock() == Blocks.AIR))) {
 				world.setBlockState(new BlockPos((int) rtx, (int) rty, (int) rtz), (new Object() {
 					public BlockState toBlock(ItemStack _stk) {
 						if (_stk.getItem() instanceof BlockItem) {
