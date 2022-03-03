@@ -1,8 +1,12 @@
 {
-  "parent": "block/slab_top",
+  "parent": "block/cube",
   "textures": {
-    "bottom": "back_in_classic:blocks/dirt",
-    "top": "back_in_classic:blocks/grass_top",
-    "side": "back_in_classic:blocks/grass_side"
+    "down": "back_in_classic:blocks/dirt",
+    "up": "back_in_classic:blocks/grass_top",
+    "north": "back_in_classic:blocks/grass_side",
+    "south": "back_in_classic:blocks/grass_side",
+    "east": "back_in_classic:blocks/grass_side",
+    "west": "back_in_classic:blocks/grass_side",
+    "particle": "back_in_classic:blocks/grass_top"
   }
 }

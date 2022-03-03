@@ -1,0 +1,16 @@
+{
+  "group": "back_in_classic",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "back_in_classic:sod_block"
+    }
+  },
+  "result": {
+    "item": "back_in_classic:sod_slab",
+    "count": 6
+  }
+}

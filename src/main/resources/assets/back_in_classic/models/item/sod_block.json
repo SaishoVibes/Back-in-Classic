@@ -1,5 +1,5 @@
 {
-  "parent": "back_in_classic:block/crushed_gravel",
+  "parent": "back_in_classic:block/sod_block",
   "display": {
     "thirdperson": {
       "rotation": [

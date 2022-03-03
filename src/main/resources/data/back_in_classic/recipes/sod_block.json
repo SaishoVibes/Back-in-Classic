@@ -1,0 +1,17 @@
+{
+  "group": "back_in_classic",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "00",
+    "00"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:grass_block"
+    }
+  },
+  "result": {
+    "item": "back_in_classic:sod_block",
+    "count": 4
+  }
+}
