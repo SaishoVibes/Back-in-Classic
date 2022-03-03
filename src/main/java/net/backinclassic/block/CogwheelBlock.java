@@ -201,13 +201,18 @@ public class CogwheelBlock extends BackInClassicModElements.ModElement {
 			return true;
 		}
 
-		@Override
+		/*@Override
 		public int getWeakPower(BlockState blockstate, IBlockReader blockAccess, BlockPos pos, Direction side) {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
 			World world = (World) blockAccess;
 			return (int) CogwheelValueProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world));
+		}*/
+        
+        @Override
+		public int getWeakPower(BlockState blockstate, IBlockReader blockAccess, BlockPos pos, Direction side) {
+			return 15;
 		}
 
 		@Override
