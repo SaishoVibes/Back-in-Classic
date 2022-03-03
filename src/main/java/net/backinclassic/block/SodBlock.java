@@ -45,7 +45,7 @@ public class SodBlock extends BackInClassicModElements.ModElement {
 	public SodBlock(BackInClassicModElements instance) {
 		super(instance, 11);
 		MinecraftForge.EVENT_BUS.register(this);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
+		//FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
 
 	@Override
