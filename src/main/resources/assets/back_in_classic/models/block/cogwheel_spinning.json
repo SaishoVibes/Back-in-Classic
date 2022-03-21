@@ -1,7 +1,12 @@
 {
-  "parent": "block/cross",
+  "parent": "block/cube",
   "textures": {
-    "cross": "back_in_classic:blocks/cogwheel_spinning",
-    "particle": "back_in_classic:blocks/cogwheel"
+    "down": "back_in_classic:blocks/oak_log_top",
+    "up": "back_in_classic:blocks/oak_log_top",
+    "north": "back_in_classic:blocks/gear_block_spin",
+    "east": "back_in_classic:blocks/gear_block_spin",
+    "south": "back_in_classic:blocks/gear_block_spin",
+    "west": "back_in_classic:blocks/gear_block_spin",
+    "particle": "back_in_classic:blocks/gear_block_spin"
   }
 }

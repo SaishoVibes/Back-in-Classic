@@ -38,9 +38,9 @@ import net.minecraft.block.Blocks;
 import net.backinclassic.BackInClassicModElements;
 
 @BackInClassicModElements.ModElement.Tag
-public class HighCliffsBiome extends BackInClassicModElements.ModElement {
+public class MonolithBiome extends BackInClassicModElements.ModElement {
 	public static Biome biome;
-	public HighCliffsBiome(BackInClassicModElements instance) {
+	public MonolithBiome(BackInClassicModElements instance) {
 		super(instance, 68);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -49,7 +49,7 @@ public class HighCliffsBiome extends BackInClassicModElements.ModElement {
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-3355393).setWaterColor(-16763956).setWaterFogColor(-16763956)
-						.withSkyColor(-8475659).withFoliageColor(-16744641).withGrassColor(-16744641).build();
+						.withSkyColor(-8475659).withFoliageColor(-16737997).withGrassColor(-16737997).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(Blocks.GRASS_BLOCK.getDefaultState(),
 								Blocks.DIRT.getDefaultState(), Blocks.DIRT.getDefaultState())));
@@ -85,16 +85,16 @@ public class HighCliffsBiome extends BackInClassicModElements.ModElement {
                 mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.SKELETON, 5, 1, 4));
                 mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.SPIDER, 5, 1, 4));
                 mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.CREEPER, 5, 1, 4));
-				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(0.1f).scale(1f).temperature(0.5f)
+				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(3f).scale(0.1f).temperature(0.5f)
 						.downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("back_in_classic:high_cliffs"));
+				event.getRegistry().register(biome.setRegistryName("back_in_classic:monolith"));
 			}
 		}
 	}
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-		BiomeDictionary.addTypes(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), BiomeDictionary.Type.FOREST);
+		BiomeDictionary.addTypes(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), BiomeDictionary.Type.PLAINS);
 		BiomeManager.addBiome(BiomeManager.BiomeType.WARM,
 				new BiomeManager.BiomeEntry(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), 4));
 	}
