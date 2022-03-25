@@ -32,6 +32,18 @@ import net.backinclassic.procedures.OldVillageAdditionalGenerationConditionProce
 
 import java.util.Random;
 
+import com.google.common.collect.ImmutableList;
+import com.mojang.serialization.Codec;
+import java.util.List;
+import net.minecraft.entity.EntityType;
+import net.minecraft.util.SharedSeedRandom;
+import net.minecraft.util.math.ChunkPos;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraft.world.biome.provider.BiomeProvider;
+import net.minecraft.world.gen.settings.StructureSeparationSettings;
+
+
 import com.google.common.collect.ImmutableMap;
 
 @Mod.EventBusSubscriber
@@ -92,4 +104,22 @@ public class SmallVillageAStructure {
 	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);
 	}
+    
+    private boolean func_242782_a(ChunkGenerator p_242782_1_, long p_242782_2_, SharedSeedRandom p_242782_4_, int p_242782_5_, int p_242782_6_) {
+        StructureSeparationSettings structureseparationsettings = p_242782_1_.func_235957_b_().func_236197_a_(Structure.VILLAGE);
+        if (structureseparationsettings == null) {
+            return false;
+        } else {
+            for(int i = p_242782_5_ - 5; i <= p_242782_5_ + 5; ++i) {
+                for(int j = p_242782_6_ - 5; j <= p_242782_6_ + 5; ++j) {
+                ChunkPos chunkpos = Structure.VILLAGE.getChunkPosForStructure(structureseparationsettings, p_242782_2_, p_242782_4_, i, j);
+                if (i == chunkpos.x && j == chunkpos.z) {
+                    return true;
+                    }
+                }
+            }
+            
+            return false;
+        }
+    }
 }
