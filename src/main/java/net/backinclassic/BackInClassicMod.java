@@ -53,7 +53,7 @@ public class BackInClassicMod {
 			() -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
     public static final String MODID = "back_in_classic";
 	public static final String NAME = "Back in Classic";
-	public static final String VERSION = "0.8.0-beta.3";
+	public static final String VERSION = "0.8.0-pre.1";
     public BackInClassicModElements elements;
 	public BackInClassicMod() {
 		elements = new BackInClassicModElements();

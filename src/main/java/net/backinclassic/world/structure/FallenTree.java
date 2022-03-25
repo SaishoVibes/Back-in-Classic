@@ -54,11 +54,11 @@ public class FallenTree {
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
-							int j = world.getHeight(Heightmap.Type.OCEAN_FLOOR_WG, i, k);
+							int j = world.getHeight(Heightmap.Type.WORLD_SURFACE_WG, i, k);
 							j -= 1;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
-							BlockPos spawnTo = new BlockPos(i + 0, j + -4, k + 0);
+							BlockPos spawnTo = new BlockPos(i + 0, j + 1, k + 0);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
@@ -86,7 +86,19 @@ public class FallenTree {
 		boolean biomeCriteria = false;
 		if (new ResourceLocation("forest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("forest_hills").equals(event.getName()))
+		if (new ResourceLocation("plains").equals(event.getName()))
+			biomeCriteria = true;
+        if (new ResourceLocation("wooded_hills").equals(event.getName()))
+			biomeCriteria = true;
+        if (new ResourceLocation("wooded_mountains").equals(event.getName()))
+			biomeCriteria = true;
+        if (new ResourceLocation("modified_wooded_badlands_plateau").equals(event.getName()))
+			biomeCriteria = true;
+        if (new ResourceLocation("badlands").equals(event.getName()))
+			biomeCriteria = true;
+        if (new ResourceLocation("flower_forest").equals(event.getName()))
+			biomeCriteria = true;
+        if (new ResourceLocation("mountain_edge").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
