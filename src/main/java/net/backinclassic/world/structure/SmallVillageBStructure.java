@@ -42,7 +42,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.biome.provider.BiomeProvider;
 import net.minecraft.world.gen.settings.StructureSeparationSettings;
-
+import net.minecraft.world.gen.feature.structure.*;
 
 import com.google.common.collect.ImmutableMap;
 
