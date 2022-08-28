@@ -12588,14 +12588,6 @@
       {
         "name": "music/game/creative/creative6",
         "stream": true
-      },
-      {
-        "name": "bic_music/flake",
-        "stream": true
-      },
-      {
-        "name": "bic_music/kyoto",
-        "stream": true
       }
     ]
   },
@@ -12671,14 +12663,6 @@
       },
       {
         "name": "music/game/piano3",
-        "stream": true
-      },
-      {
-        "name": "bic_music/flake",
-        "stream": true
-      },
-      {
-        "name": "bic_music/kyoto",
         "stream": true
       }
     ]

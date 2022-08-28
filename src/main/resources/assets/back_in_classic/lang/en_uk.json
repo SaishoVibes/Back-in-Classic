@@ -63,5 +63,7 @@
   "block.back_in_classic.dirt_slab": "Dirt Slab",
   "block.back_in_classic.sod_slab": "Sod Slab",
   "block.back_in_classic.gear": "Cog",
-  "block.back_in_classic.inverse_gear": "Cog"
+  "block.back_in_classic.inverse_gear": "Cog",
+  "block.back_in_classic.wax_block": "Wax Block",
+  "block.back_in_classic.sod_block": "Sod Block"
 }
