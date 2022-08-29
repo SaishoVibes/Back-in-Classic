@@ -44,7 +44,7 @@ public class InstaBowShotProcedure {
 	private static class GlobalTrigger {
 		@SubscribeEvent
 		public static void onUseItemStart(LivingEntityUseItemEvent.Start event) {
-			if (event != null && event.getEntity() != null && BackInClassicConfig.instant_bow.get() == true) {
+			if (event != null && event.getEntity() != null && BackInClassicConfig.instant_bow.get()) {
 				Entity entity = event.getEntity();
 				double i = entity.getPosX();
 				double j = entity.getPosY();
@@ -116,7 +116,7 @@ public class InstaBowShotProcedure {
 						return false;
 					}
 				}.checkGamemode(entity)))
-				&& ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BOW)))) {
+				&& ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BOW))) && BackInClassicConfig.instant_bow.get()) {
 			oldDamage = (double) ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getDamage());
 			if (entity instanceof LivingEntity) {
 				Entity _ent = entity;
@@ -124,7 +124,7 @@ public class InstaBowShotProcedure {
 					ArrowEntity entityToSpawn = new ArrowEntity(_ent.world, (LivingEntity) entity);
 					entityToSpawn.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z,
 							(float) (2 + ((EnchantmentHelper.getEnchantmentLevel(SharpshotEnchantment.enchantment, (itemstack))) / 2)), 0);
-					entityToSpawn.setDamage((float) (5 + ((EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, (itemstack))) / 2)));
+					entityToSpawn.setDamage((float) (5 + ((EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, (itemstack))) / 2) - ((EnchantmentHelper.getEnchantmentLevel(SharpshotEnchantment.enchantment, (itemstack))) * 0.8)));
 					entityToSpawn.setKnockbackStrength(
 							(int) (Math.random() + ((EnchantmentHelper.getEnchantmentLevel(Enchantments.PUNCH, (itemstack))) / 2)));
 					_ent.world.addEntity(entityToSpawn);
@@ -175,45 +175,24 @@ public class InstaBowShotProcedure {
 							"data merge entity @e[type=arrow,distance=..2,limit=1] {Fire:32767}");
 				}
 			}
-			if (entity instanceof PlayerEntity)
+			if (entity instanceof PlayerEntity) {
+				int rand = (int) Math.random()*5;
+				int antirand = (int) Math.random()*2;
 				((PlayerEntity) entity).getCooldownTracker().setCooldown(
-						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(), (int) 2);
-			if ((Math.random() >= 0.2)) {
-				if (world instanceof World && !world.isRemote()) {
-					((World) world).getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"playsound back_in_classic:instant_bow_shot player @p ~ ~ ~ .75 1");
-				} else {
-					((World) world).getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"playsound back_in_classic:instant_bow_shot player @a ~ ~ ~ .75 1");
-				}
-			} else if ((Math.random() >= 0.1)) {
-				if (world instanceof World && !world.isRemote()) {
-					((World) world).getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"playsound back_in_classic:instant_bow_shot player @p ~ ~ ~ .75 1.25");
-				} else {
-					((World) world).getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"playsound back_in_classic:instant_bow_shot player @a ~ ~ ~ .75 1.25");
-				}
+						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem(), (int) 5+rand-antirand);
+			}
+			if ((world instanceof World || !world.isRemote()) && Math.random() >= 0.7) {
+				((World) world).playSound(null, new BlockPos((double) x-0.5, (double) y-0.5, (double) z-0.5),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
+						SoundCategory.NEUTRAL,(float) 0.9, (float) 1.1);
+			} else if ((world instanceof World || !world.isRemote()) && Math.random() >= 0.4) {
+				((World) world).playSound(null, new BlockPos((double) x-0.5, (double) y-0.5, (double) z-0.5),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
+						SoundCategory.NEUTRAL,(float) 0.9, (float) 0.9);
 			} else {
-				if (world instanceof World && !world.isRemote()) {
-					((World) world).getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"playsound back_in_classic:instant_bow_shot player @p ~ ~ ~ .75 .75");
-				} else {
-					((World) world).getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"playsound back_in_classic:instant_bow_shot player @a ~ ~ ~ .75 .75");
-				}
+				((World) world).playSound(null, new BlockPos((double) x-0.5, (double) y-0.5, (double) z-0.5),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("back_in_classic:instant_bow_shot")),
+						SoundCategory.NEUTRAL,(float) 0.9, (float) 1);
 			}
 		}
 	}

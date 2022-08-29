@@ -5,6 +5,7 @@ import net.backinclassic.BackInClassicMod;
 
 //Thank You Vazkii for inspiring the reach_around!
 
+import net.minecraft.block.material.Material;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.World;
@@ -12,8 +13,6 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
-
-import net.backinclassic.world.ReachAroundGamerule;
 
 import java.util.Map;
 
@@ -43,131 +42,81 @@ public class ReacharoundsoundProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-        if ((BackInClassicConfig.reach_around_block.get() == true)) {
-            if (((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK)
-                    || ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.GLASS))
-                    || (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-                            .getMaterial() == net.minecraft.block.material.Material.REDSTONE_LIGHT)
-                            || ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-                                    .getMaterial() == net.minecraft.block.material.Material.BARRIER)))) {
-                if (world instanceof World && !world.isRemote()) {
-                    ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1);
-                } else {
-                    ((World) world).playSound(x, y, z,
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1, false);
-                }
-            } else if (((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.CLAY)
-                    || ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.SNOW))
-                    || (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.EARTH)
-                            || ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-                                    .getMaterial() == net.minecraft.block.material.Material.SAND)))) {
-                if (world instanceof World && !world.isRemote()) {
-                    ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.gravel.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1);
-                } else {
-                    ((World) world).playSound(x, y, z,
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.gravel.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1, false);
-                }
-            } else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.WOOL)) {
-                if (world instanceof World && !world.isRemote()) {
-                    ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1);
-                } else {
-                    ((World) world).playSound(x, y, z,
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1, false);
-                }
-            } else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.WOOD)) {
-                if (world instanceof World && !world.isRemote()) {
-                    ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1);
-                } else {
-                    ((World) world).playSound(x, y, z,
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1, false);
-                }
-            } else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.IRON)) {
-                if (world instanceof World && !world.isRemote()) {
-                    ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.metal.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1);
-                } else {
-                    ((World) world).playSound(x, y, z,
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.metal.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1, false);
-                }
-            } else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ANVIL)) {
-                if (world instanceof World && !world.isRemote()) {
-                    ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1);
-                } else {
-                    ((World) world).playSound(x, y, z,
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1, false);
-                }
-            } else if (((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.LEAVES)
-                    || ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.PLANTS))
-                    || (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-                            .getMaterial() == net.minecraft.block.material.Material.TALL_PLANTS)
-                            || (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-                                    .getMaterial() == net.minecraft.block.material.Material.SPONGE)
-                                    || ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-                                            .getMaterial() == net.minecraft.block.material.Material.ORGANIC))))) {
-                if (world instanceof World && !world.isRemote()) {
-                    ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.break")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1);
-                } else {
-                    ((World) world).playSound(x, y, z,
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.break")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1, false);
-                }
-            } else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-                    .getMaterial() == net.minecraft.block.material.Material.NETHER_WOOD)
-                    || ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-                            .getMaterial() == net.minecraft.block.material.Material.NETHER_PLANTS))) {
-                if (world instanceof World && !world.isRemote()) {
-                    ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.nylium.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1);
-                } else {
-                    ((World) world).playSound(x, y, z,
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.nylium.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1, false);
-                }
-            } else if (((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ICE)
-                    || ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.PACKED_ICE))
-                    || (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-                            .getMaterial() == net.minecraft.block.material.Material.STRUCTURE_VOID)
-                            || ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-                                    .getMaterial() == net.minecraft.block.material.Material.WEB)))) {
-                if (world instanceof World && !world.isRemote()) {
-                    ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1);
-                } else {
-                    ((World) world).playSound(x, y, z,
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.place")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1, false);
-                }
-            } else {
-                if (world instanceof World && !world.isRemote()) {
-                    ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.break")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1);
-                } else {
-                    ((World) world).playSound(x, y, z,
-                            (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.break")),
-                            SoundCategory.BLOCKS, (float) 1, (float) 1, false);
-                }
+        if ((BackInClassicConfig.reach_around_block.get())) {
+            if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.GLASS) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.glass.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.ANVIL) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.BARRIER) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.ICE) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.ice.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.CLAY) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.clay.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.EARTH) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dirt.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.GOURD) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.melon.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.IRON) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.iron_block.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.PLANTS) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.SAND) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sand.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.SPONGE) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.WOOD) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.oak_planks.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == Material.WOOL) {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.white_wool.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
+            }
+            else {
+                ((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+                        (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.place")),
+                        SoundCategory.BLOCKS, (float) 1, (float) 1);
             }
         }
 	}

@@ -13,16 +13,19 @@ public final class BackInClassicConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> reach_around_block;
     public static final ForgeConfigSpec.ConfigValue<Boolean> after_death_explosion;
 
+    public static final ForgeConfigSpec.ConfigValue<Boolean> generate_biomes;
+
 
     static {
     BUILDER.push("Config for Back in Classic!");
     //Config Variables in file
-    old_combat = BUILDER.comment("Reintroduce the old combat system. Default is False.").define("Old Combat",false);
+    old_combat = BUILDER.comment("(NOT USED) Reintroduce the old combat system. Default is False.").define("(Broken) Old Combat",false);
     infinite_fluids = BUILDER.comment("Make Lava and Water Spawners infinite. Default is False.").define("Infinite Fluids",false);
     old_hunger = BUILDER.comment("Reintroduce the old hunger system. Default is False.").define("Old Hunger",false);
     instant_bow = BUILDER.comment("Have the bow have no drawback. Default is True.").define("Instant Bow",true);
     reach_around_block = BUILDER.comment("Add in the Bedrock edition system of reaching around block edges. Default is True.").define("Reach Around Block",true);
-    after_death_explosion = BUILDER.comment("Have creepers explode upon death. Default is False.").define("Old Combat",false);
+    after_death_explosion = BUILDER.comment("Have creepers explode upon death. Default is False.").define("Creepers Explode on Death",false);
+    generate_biomes = BUILDER.comment("(NOT USED) Have the Back in Classic biomes in your world. Default is True.").define("(Broken) Back in Classic Biomes",true);
 
     BUILDER.pop();
     SPEC = BUILDER.build();
