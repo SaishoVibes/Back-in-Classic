@@ -1,5 +1,6 @@
 package net.backinclassic.reach_around;
 
+import net.backinclassic.BackInClassicConfig;
 import net.backinclassic.BackInClassicMod;
 
 //Thank You Vazkii for inspiring the reach_around!
@@ -42,7 +43,7 @@ public class ReacharoundsoundProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-        if ((world.getWorldInfo().getGameRulesInstance().getBoolean(ReachAroundGamerule.gamerule)) == (true)) {
+        if ((BackInClassicConfig.reach_around_block.get() == true)) {
             if (((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK)
                     || ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.GLASS))
                     || (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))

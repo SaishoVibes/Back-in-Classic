@@ -14,7 +14,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.Entity;
 
-import net.backinclassic.world.AfterDeathExplosion;
+import net.backinclassic.BackInClassicConfig;
 
 import net.backinclassic.BackInClassicMod;
 
@@ -81,7 +81,7 @@ public class CreeperDiesProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((entity instanceof CreeperEntity) && ((world.getWorldInfo().getGameRulesInstance().getBoolean(AfterDeathExplosion.gamerule)) == (true))) {
+		if ((entity instanceof CreeperEntity) && (BackInClassicConfig.after_death_explosion.get() == true)) {
 			/*if (world instanceof World && !((World) world).isRemote) {
 				((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 2, Explosion.Mode.DESTROY);
 			}

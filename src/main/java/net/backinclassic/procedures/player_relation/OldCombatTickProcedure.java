@@ -14,7 +14,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 
-import net.backinclassic.world.DoOldCombatGameRule;
+import net.backinclassic.BackInClassicConfig;
 import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
@@ -67,12 +67,12 @@ public class OldCombatTickProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getWorldInfo().getGameRulesInstance().getBoolean(DoOldCombatGameRule.gamerule)) == (true))) {
+		if ((BackInClassicConfig.old_combat.get() == true)) {
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						"execute as @p run attribute @s minecraft:generic.attack_speed base set 4096");
+						"execute as @p run attribute @s minecraft:generic.attack_speed base set 1024");
 			}
 		}
 	}

@@ -10,7 +10,7 @@ import net.minecraft.util.FoodStats;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
-import net.backinclassic.world.DoBetaHungerGameRule;
+import net.backinclassic.BackInClassicConfig;
 import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
@@ -49,7 +49,7 @@ public class NoHungerProcedure {
 			}
 
 			private void run() {
-				if (((world.getWorldInfo().getGameRulesInstance().getBoolean(DoBetaHungerGameRule.gamerule)) == (true))) {
+				if ((BackInClassicConfig.old_hunger.get() == true)) {
 					if ((entity instanceof PlayerEntity)) {
 						if (entity instanceof PlayerEntity) {
 							ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, ((PlayerEntity) entity).getFoodStats(), (float) 0,

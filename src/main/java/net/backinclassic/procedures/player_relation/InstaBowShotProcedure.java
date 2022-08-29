@@ -31,7 +31,7 @@ import net.minecraft.client.network.play.NetworkPlayerInfo;
 import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.client.Minecraft;
 
-import net.backinclassic.world.InstantBowGameRule;
+import net.backinclassic.BackInClassicConfig;
 import net.backinclassic.enchantment.SharpshotEnchantment;
 import net.backinclassic.BackInClassicMod;
 
@@ -44,7 +44,7 @@ public class InstaBowShotProcedure {
 	private static class GlobalTrigger {
 		@SubscribeEvent
 		public static void onUseItemStart(LivingEntityUseItemEvent.Start event) {
-			if (event != null && event.getEntity() != null) {
+			if (event != null && event.getEntity() != null && BackInClassicConfig.instant_bow.get() == true) {
 				Entity entity = event.getEntity();
 				double i = entity.getPosX();
 				double j = entity.getPosY();
@@ -116,8 +116,7 @@ public class InstaBowShotProcedure {
 						return false;
 					}
 				}.checkGamemode(entity)))
-				&& ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BOW)
-						&& ((world.getWorldInfo().getGameRulesInstance().getBoolean(InstantBowGameRule.gamerule)) == (true))))) {
+				&& ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BOW)))) {
 			oldDamage = (double) ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getDamage());
 			if (entity instanceof LivingEntity) {
 				Entity _ent = entity;

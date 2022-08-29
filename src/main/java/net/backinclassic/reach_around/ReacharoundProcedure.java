@@ -4,7 +4,7 @@ import net.backinclassic.BackInClassicMod;
 
 //Thank You Vazkii for inspiring the reach_around!
 
-import net.backinclassic.world.ReachAroundGamerule;
+import net.backinclassic.BackInClassicConfig;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -96,7 +96,7 @@ public class ReacharoundProcedure {
 				entity.getEyePosition(1f).add(entity.getLook(1f).x * 2, entity.getLook(1f).y * 2, entity.getLook(1f).z * 2),
 				RayTraceContext.BlockMode.OUTLINE, RayTraceContext.FluidMode.NONE, entity)).getPos().getZ());
 		if (((!((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.AIR))
-				&& ((world.getWorldInfo().getGameRulesInstance().getBoolean(ReachAroundGamerule.gamerule)) == (true)) && ((new Object() {
+				&& (BackInClassicConfig.reach_around_block.get() == true) && ((new Object() {
 			public BlockState toBlock(ItemStack _stk) {
 				if (_stk.getItem() instanceof BlockItem) {
 					return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();

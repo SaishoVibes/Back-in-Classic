@@ -8,7 +8,7 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.block.Blocks;
 
-import net.backinclassic.world.DoInfiniteWaterGameRule;
+import net.backinclassic.BackInClassicConfig;
 import net.backinclassic.block.InfiniteLavaBlock;
 import net.backinclassic.BackInClassicMod;
 
@@ -40,7 +40,7 @@ public class InfiniteLavaUpdateTickProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getWorldInfo().getGameRulesInstance().getBoolean(DoInfiniteWaterGameRule.gamerule)) == (true))) {
+		if ((BackInClassicConfig.infinite_fluids.get() == true)) {
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;

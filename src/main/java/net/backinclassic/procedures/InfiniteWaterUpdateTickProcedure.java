@@ -1,5 +1,6 @@
 package net.backinclassic.procedures;
 
+import net.backinclassic.BackInClassicConfig;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -8,7 +9,7 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.block.Blocks;
 
-import net.backinclassic.world.DoInfiniteWaterGameRule;
+import net.backinclassic.BackInClassicConfig;
 import net.backinclassic.block.InfiniteWaterBlock;
 import net.backinclassic.BackInClassicMod;
 
@@ -40,7 +41,7 @@ public class InfiniteWaterUpdateTickProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getWorldInfo().getGameRulesInstance().getBoolean(DoInfiniteWaterGameRule.gamerule)) == (true))) {
+		if ((BackInClassicConfig.infinite_fluids.get() == true)) {
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;

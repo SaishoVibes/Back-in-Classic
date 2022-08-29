@@ -14,7 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.backinclassic.world.DoBetaHungerGameRule;
+import net.backinclassic.BackInClassicConfig;
 import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
@@ -61,7 +61,7 @@ public class InstantFoodHealProcedure {
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((ItemTags.getCollection().getTagByID(new ResourceLocation(("back_in_classic:foodstuffs").toLowerCase(java.util.Locale.ENGLISH)))
 				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem()))
-				&& ((world.getWorldInfo().getGameRulesInstance().getBoolean(DoBetaHungerGameRule.gamerule)) == (true)))) {
+				&& (BackInClassicConfig.old_hunger.get() == true))) {
 			if (dependencies.get("event") != null) {
 				Object _obj = dependencies.get("event");
 				if (_obj instanceof Event) {
