@@ -1,33 +1,39 @@
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
+        //maven { url = 'https://repo.spongepowered.org/mixin' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        //classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
+//apply plugin: 'org.spongepowered.mixin'
 
-version = '0.8.2-dev'
+version = '0.8.2-dev-buildtest'
 
 group = 'com.saisho.backinclassic'
 archivesBaseName = 'backinclassic'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
-// java.toolchain.languageVersion = JavaLanguageVersion.of(16)
+compileJava {
+    [compileJava, compileTestJava]*.options*.encoding = "UTF-8"
+}
+
 
 minecraft {
+    //mappings channel: 'snapshot', version: '20210309-1.16.5'
     mappings channel: 'snapshot', version: '20201028-1.16.3'
-    // mappings channel: 'official', version: '1.17.1'
     runs {
         client {
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-
+            //arg '-mixin.comfig=backinclassic.mixin.json'
             mods {
                 examplemod {
                     source sourceSets.main
@@ -52,8 +58,13 @@ minecraft {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.0'
-    // minecraft 'net.minecraftforge:forge:1.17.1-37.0.34'
 }
-
-// apply from: 'mcreator.gradle'
-
+/*
+jar {
+    manifest {
+        attributes([
+                "Specification-Title": "backinclassic",
+                "Specification-Vendor": ""
+        ])
+    }
+}*/

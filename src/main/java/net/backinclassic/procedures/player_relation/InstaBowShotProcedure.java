@@ -124,7 +124,7 @@ public class InstaBowShotProcedure {
 					ArrowEntity entityToSpawn = new ArrowEntity(_ent.world, (LivingEntity) entity);
 					entityToSpawn.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z,
 							(float) (2 + ((EnchantmentHelper.getEnchantmentLevel(SharpshotEnchantment.enchantment, (itemstack))) / 2)), 0);
-					entityToSpawn.setDamage((float) (5 + ((EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, (itemstack))) / 2) - ((EnchantmentHelper.getEnchantmentLevel(SharpshotEnchantment.enchantment, (itemstack))) * 0.8)));
+					entityToSpawn.setDamage((float) (5 - Math.random() + ((EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, (itemstack))) / 2) - ((EnchantmentHelper.getEnchantmentLevel(SharpshotEnchantment.enchantment, (itemstack))) * 0.8)));
 					entityToSpawn.setKnockbackStrength(
 							(int) (Math.random() + ((EnchantmentHelper.getEnchantmentLevel(Enchantments.PUNCH, (itemstack))) / 2)));
 					_ent.world.addEntity(entityToSpawn);
