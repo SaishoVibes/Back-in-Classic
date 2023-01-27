@@ -1,13 +1,18 @@
 plugins {
-    id("fabric-loom") version("+")
-    id("io.github.juuxel.loom-quiltflower") version("+")
-    id("maven-publish")
-    id("eclipse")
-    id("idea")
-    id("java-library")
+    id "fabric-loom" version "+"
+    id "maven-publish"
+    id "eclipse"
+    id "idea"
+    id "java-library"
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 17
+}
+
 compileJava {
     [compileJava, compileTestJava]*.options*.encoding = "UTF-8"
 }
@@ -105,6 +110,36 @@ dependencies {
 
     modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_version}")
 }
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.setEncoding("UTF-8")
+    it.options.setRelease(17)
+    options.setFork(true)
+    options.setIncremental(true)
+}
+
+tasks.withType(Test).configureEach {
+    setMaxParallelForks(Runtime.runtime.availableProcessors().intdiv(2) ?: 1)
+}
+
+java {
+    setSourceCompatibility(JavaVersion.VERSION_17)
+    setTargetCompatibility(JavaVersion.VERSION_17)
+
+    withSourcesJar()
+}
+
+String getVersion() {
+    String version = "${mod_version}-${mod_loader}+${minecraft_version}"
+
+    if (!project.release) {
+        version += "-unstable"
+    }
+
+    return version
+}
+
+
 /*
 jar {
     manifest {

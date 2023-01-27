@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "back_in_classic",
   "version": "${version}",
-  "name": "Back In Classic",
+  "name": "Back in Classic",
   "description": "Bringing back Classic Features with new functions!",
   "authors": [
     "FrozenBlock"
@@ -23,16 +23,15 @@
   "entrypoints": {
 	"main": [
 	  "net.backinclassic.BackInClassicMod"
-	],
+	]
   },
   "mixins": [
 	"backinclassic.mixins.json"
   ],
-  "accessWidener": "wilderwild.accesswidener",
   "depends": {
 	"fabricloader": ">=0.14.12",
 	"fabric-api": ">=0.73.0",
 	"minecraft": "1.19.3",
 	"java": ">=17"
-  },
+  }
 }
