@@ -25,7 +25,7 @@ public class SharpshotEnchantment extends BackInClassicModElements.ModElement {
 	}
 	public static class CustomEnchantment extends Enchantment {
 		public CustomEnchantment(EquipmentSlotType... slots) {
-			super(Enchantment.Rarity.RARE, EnchantmentType.BOW, slots);
+			super(Rarity.RARE, EnchantmentType.BOW, slots);
 		}
 
 		@Override

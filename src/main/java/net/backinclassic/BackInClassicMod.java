@@ -98,4 +98,6 @@ public class BackInClassicMod {
 			this.parent.elements.getElements().forEach(element -> element.serverLoad(event));
 		}
 	}
+
+	public static boolean areConfigsInit;
 }

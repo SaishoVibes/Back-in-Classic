@@ -66,15 +66,15 @@ public class BackInClassicModElements {
 			for (ModFileScanData.AnnotationData annotationData : annotations) {
 				if (annotationData.getAnnotationType().getClassName().equals(ModElement.Tag.class.getName())) {
 					Class<?> clazz = Class.forName(annotationData.getClassType().getClassName());
-					if (clazz.getSuperclass() == BackInClassicModElements.ModElement.class)
-						elements.add((BackInClassicModElements.ModElement) clazz.getConstructor(this.getClass()).newInstance(this));
+					if (clazz.getSuperclass() == ModElement.class)
+						elements.add((ModElement) clazz.getConstructor(this.getClass()).newInstance(this));
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		Collections.sort(elements);
-		elements.forEach(BackInClassicModElements.ModElement::initElements);
+		elements.forEach(ModElement::initElements);
 		MinecraftForge.EVENT_BUS.register(new BackInClassicModVariables(this));
 	}
 
