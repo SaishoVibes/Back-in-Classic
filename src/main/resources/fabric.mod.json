@@ -4,9 +4,6 @@
   "version": "${version}",
   "name": "Back in Classic",
   "description": "Bringing back Classic Features with new functions!",
-  "authors": [
-    "FrozenBlock"
-  ],
   "contributors": [
     "Saisho",
     "Charles445",
