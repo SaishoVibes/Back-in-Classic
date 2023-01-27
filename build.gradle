@@ -1,65 +1,109 @@
-buildscript {
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net' }
-        //maven { url = 'https://repo.spongepowered.org/mixin' }
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        //classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
-    }
+plugins {
+    id("fabric-loom") version("+")
+    id("io.github.juuxel.loom-quiltflower") version("+")
+    id("maven-publish")
+    id("eclipse")
+    id("idea")
+    id("java-library")
 }
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'eclipse'
-//apply plugin: 'org.spongepowered.mixin'
 
-version = '0.8.2-dev-buildtest'
-
-group = 'com.saisho.backinclassic'
-archivesBaseName = 'backinclassic'
-
-java.toolchain.languageVersion = JavaLanguageVersion.of(8)
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 compileJava {
     [compileJava, compileTestJava]*.options*.encoding = "UTF-8"
 }
 
+setArchivesBaseName(project.archives_base_name)
+setVersion(getVersion())
+setGroup(project.maven_group)
 
-minecraft {
-    //mappings channel: 'snapshot', version: '20210309-1.16.5'
-    //mappings channel: 'snapshot', version: '20201028-1.16.3'
-    mappings channel: 'snapshot', version: '20201028-1.19.3'
-    runs {
-        client {
-            workingDirectory project.file('run')
+loom {
+    setRuntimeOnlyLog4j(true)
 
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            //arg '-mixin.comfig=backinclassic.mixin.json'
-            mods {
-                examplemod {
-                    source sourceSets.main
-                }
-            }
+    mixin {
+        setDefaultRefmapName("mixins.backinclassic.refmap.json")
+    }
+
+    //setAccessWidenerPath(file("src/main/resources/wilderwild.accesswidener"))
+
+    interfaceInjection {
+        setEnableDependencyInterfaceInjection(false)
+    }
+}
+
+configurations {
+    includeModImplementation
+    includeImplementation
+
+    include.extendsFrom(includeImplementation)
+    include.extendsFrom(includeModImplementation)
+
+    implementation.extendsFrom(includeImplementation)
+    modImplementation.extendsFrom(includeModImplementation)
+}
+
+repositories {
+    maven {
+        setUrl("https://jitpack.io")
+    }
+    maven {
+        setName("Modrinth")
+        setUrl("https://api.modrinth.com/maven")
+
+        content {
+            includeGroup("maven.modrinth")
         }
+    }
+    maven {
+        setUrl("https://maven.terraformersmc.com")
 
-        server {
-            workingDirectory project.file('run')
-
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-
-            mods {
-                examplemod {
-                    source sourceSets.main
-                }
-            }
+        content {
+            includeGroup("com.terraformersmc")
         }
+    }
+    maven {
+        setUrl("https://maven.shedaniel.me/")
+    }
+    maven {
+        setUrl("https://cursemaven.com")
+
+        content {
+            includeGroup("curse.maven")
+        }
+    }
+    maven {
+        setUrl("https://maven.flashyreese.me/releases")
+    }
+    maven {
+        setUrl("https://maven.flashyreese.me/snapshots")
+    }
+    maven {
+        setUrl("https://maven.minecraftforge.net/")
+    }
+    maven {
+        setUrl("https://maven.parchmentmc.org")
+    }
+    maven {
+        setName("Quilt")
+        setUrl("https://maven.quiltmc.org/repository/release")
+    }
+
+    flatDir {
+        dirs("libs")
     }
 }
 
 dependencies {
-    //minecraft 'net.minecraftforge:forge:1.16.5-36.2.0'
-    minecraft 'net.minecraftforge:forge:1.19.3-44.0.30'
+    minecraft("com.mojang:minecraft:${minecraft_version}")
+    mappings(loom.layered {
+        it.mappings("org.quiltmc:quilt-mappings:${minecraft_version}+build.${quilt_mappings}:intermediary-v2")
+        it.parchment("org.parchmentmc.data:parchment-1.19.3:${parchment_mappings}@zip")
+        it.officialMojangMappings {
+            setNameSyntheticMembers(false)
+        }
+    })
+    modImplementation("net.fabricmc:fabric-loader:${loader_version}")
+
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_version}")
 }
 /*
 jar {

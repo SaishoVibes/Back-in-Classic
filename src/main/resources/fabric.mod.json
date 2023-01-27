@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "back_in_classic",
+  "version": "${version}",
+  "name": "Back In Classic",
+  "description": "Bringing back Classic Features with new functions!",
+  "authors": [
+    "FrozenBlock"
+  ],
+  "contributors": [
+    "Saisho",
+    "Charles445",
+    "Luna/AViewFromTheTop"
+  ],
+  "contact": {
+	"homepage": "https://www.curseforge.com/minecraft/mc-mods/back-in-classic",
+	"sources": "https://github.com/SaishoVibes/Back-in-Classic",
+	"issues": "https://github.com/SaishoVibes/Back-in-Classic/issues"
+  },
+  "license": "Academic Free License v3.0",
+  "icon": "logo.png",
+  "environment": "*",
+  "entrypoints": {
+	"main": [
+	  "net.backinclassic.BackInClassicMod"
+	],
+  },
+  "mixins": [
+	"backinclassic.mixins.json"
+  ],
+  "accessWidener": "wilderwild.accesswidener",
+  "depends": {
+	"fabricloader": ">=0.14.12",
+	"fabric-api": ">=0.73.0",
+	"minecraft": "1.19.3",
+	"java": ">=17"
+  },
+}
