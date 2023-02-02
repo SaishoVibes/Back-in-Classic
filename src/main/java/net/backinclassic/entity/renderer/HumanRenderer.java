@@ -12,7 +12,7 @@ import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;
 import net.minecraft.client.renderer.entity.BipedRenderer;
 
-import net.backinclassic.entity.HumanEntity;
+import net.backinclassic.entity.Human;
 
 @OnlyIn(Dist.CLIENT)
 public class HumanRenderer {
@@ -20,7 +20,7 @@ public class HumanRenderer {
 		@SubscribeEvent
 		@OnlyIn(Dist.CLIENT)
 		public void registerModels(ModelRegistryEvent event) {
-			RenderingRegistry.registerEntityRenderingHandler(HumanEntity.entity, renderManager -> {
+			RenderingRegistry.registerEntityRenderingHandler(Human.entity, renderManager -> {
 				BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {

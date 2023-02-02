@@ -9,7 +9,7 @@ import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.Entity;
 
-import net.backinclassic.entity.HumanEntity;
+import net.backinclassic.entity.Human;
 import net.backinclassic.BackInClassicMod;
 
 import java.util.Map;
@@ -41,7 +41,7 @@ public class HumanSpawnOnKeyReleasedProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (world instanceof ServerWorld) {
-			Entity entityToSpawn = new HumanEntity.CustomEntity(HumanEntity.entity, (World) world);
+			Entity entityToSpawn = new Human.CustomEntity(Human.entity, (World) world);
 			entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
 			entityToSpawn.setRenderYawOffset((float) 0);
 			entityToSpawn.setRotationYawHead((float) 0);
