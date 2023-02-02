@@ -9,7 +9,8 @@ import net.minecraft.sounds.SoundEvent;
 
 public final class RegisterSounds {
 
-    public static final SoundEvent ENTITY_FROG_SUS_DEATH = register("entity.frog.sus_death");
+    public static final SoundEvent HUMAN_OOF = register("entity.human.oof");
+    public static final SoundEvent HUMAN_DEATH = register("entity.human.death");
 
 	private static Holder.Reference<SoundEvent> registerForHolder(String string) {
 		return registerForHolder(BackInClassicMod.id(string));

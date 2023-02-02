@@ -2,8 +2,7 @@ package net.backinclassic.entity;
 
 import com.google.common.collect.ImmutableMap;
 import net.backinclassic.procedures.HumanNaturalEntityVillageConditionProcedure;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.backinclassic.registry.RegisterSounds;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -61,11 +60,11 @@ public class Human extends Monster {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource damageSource) {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("back_in_classic:human_oof"));
+		return RegisterSounds.HUMAN_OOF;
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("back_in_classic:human_death"));
+		return RegisterSounds.HUMAN_DEATH;
 	}
 }
