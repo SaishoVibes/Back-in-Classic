@@ -1,35 +1,26 @@
 package net.backinclassic.entity.renderer;
 
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.renderer.entity.model.BipedModel;
-import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;
-import net.minecraft.client.renderer.entity.BipedRenderer;
-
+import net.backinclassic.BackInClassicClient;
+import net.backinclassic.BackInClassicMod;
 import net.backinclassic.entity.Human;
+import net.backinclassic.entity.model.HumanModel;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
+import net.minecraft.resources.ResourceLocation;
 
-@OnlyIn(Dist.CLIENT)
-public class HumanRenderer {
-	public static class ModelRegisterHandler {
-		@SubscribeEvent
-		@OnlyIn(Dist.CLIENT)
-		public void registerModels(ModelRegistryEvent event) {
-			RenderingRegistry.registerEntityRenderingHandler(Human.entity, renderManager -> {
-				BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
-					@Override
-					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("back_in_classic:textures/original_steve.png");
-					}
-				};
-				customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));
-				return customRender;
-			});
-		}
+@Environment(EnvType.CLIENT)
+public class HumanRenderer extends HumanoidMobRenderer<Human, HumanModel<Human>> {
+	private static final String TEXTURE = "textures/entity/human.png";
+
+	public HumanRenderer(EntityRendererProvider.Context context) {
+		super(context, new HumanModel<>(context.bakeLayer(BackInClassicClient.HUMAN)), 0.6F);
 	}
+
+	@Override
+	public ResourceLocation getTextureLocation(Human entity) {
+		return BackInClassicMod.id(TEXTURE);
+	}
+
 }
